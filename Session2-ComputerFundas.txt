@@ -1,0 +1,140 @@
+Today's Agenda
+--------------
+Computer  Fundamentals - 
+	Computer Networks
+	Internet, Intranet and Extranet
+	Computer Networks
+--------------
+What is a Network regarding Computers?
+
+An interconnection b/w two or more than two computers and other resources like printer, scanner, etc is called an Network. 
+
+Features :- 
+
+1. Data Sharing
+2. Backup
+3. Security
+4. Reliablity
+5. Performance
+
+Note:-  from above all features Security and Sharing is very important feature of network. 
+
+Network Types
+	As per the Network Architecture(geographical area covered), there are 3 types of Networks
+		1.  Local Area Network(LAN)
+				This type of network is used within the building. 
+				Here network cables are used to establish network.
+					Ex:-  Any Office
+		2.  Metropoliton Area Network(MAN)
+				This type of network is used b/w one location to another location.
+				Here network established by using Satilites
+					Ex:-  TV Channels 
+		3.  Wide Area Network(WAN)
+				This type of network is also used b/w one location to another location
+				here network established by using Internet.
+					Ex:- Any offices located in different places.
+
+There are topoligies to establish network b/w computers
+
+What is a network topology ?
+It is the configuration of n/w that includes nodes/machines and conneting lines via sender and reciever.
+
+1. Bus Topology
+	This type of n/w in which every computer and network device is connected to single cable. 
+	When it has exactly two endpoints. It is also called as Linear Bus Topology. 
+
+	Advantages
+		It is very easy to setup
+		it uses less cables when compare to other topologies
+
+	Limitations
+		All Communications is disrupted when bus cable breaks.
+2. Star
+	All the PC's in this topology are connected to a single hub throgh cable. 
+	This hub stands a central node. 
+3. Ring
+	Here computer are connected in a circle format. 
+4. Tree
+	It is having a cluster center that is linked to all other nodes and creating hierarchy. 
+5. Mesh
+	It is a connection b/w two nodes or devices which is point -to - point. 	
+6. Hybrid
+	It is a combination of two or more than two topologies combining into single topology. 
+-------------
+What is an Internet?
+		Networks of Network is called internet.
+			or
+		Global Network is also called as internet. 
+			
+		Internet is also called as Web
+		Website
+		Web Site  should call it as Web Application
+
+		In Internet, every system(server or client) identified with unique id called as 
+		IP Address 
+		IP = Internet Protocal
+
+		TCP / IP  :-  Transfer Control Protocal / Internet Protocal
+		
+		TCP :-  It allows to transmit data from server to client and vice versa. 
+
+		Here every application is also identified with an IP Address. 
+
+		www.google.com  = having an IP Address
+		www.gmail.com = having an IP Address
+		
+		but here externallly we won't use ip address, use always registered web urls. 
+				http://190.123.45.9
+
+		For Every task, there is a protocal (it is a rule to perform a task) to complete that
+		task. 
+
+		http  :-  hyper text transfer protocal
+		https :- http s - secure
+				both protocal uses are to load pages
+
+		smtp :-  Simple Mailer Transfor Protocal  - uses for sending mail
+		ftp :-   File Transfor Protocal -  for attachments of the file to mail
+
+		What is a browser?
+			It is a protocal based application which meant for accessing web apps from 			internet.
+
+		To work with Web?
+			Internet Connection
+			Browser
+			Relavent Web Url's
+
+			Known protocals
+				TCP / IP
+				Http/Https
+				SMTP , FTP
+
+Intranet  and Extranet :- 
+An intranet is a private network that is contained within an enterprize/orgnisation. 
+It consist of interlinked LAN and uses WAN for network connectivity. 
+
+Extranet :- 
+It uses internet protocals to link intranet over the public internet. It is a part of company's intranet that is extended to user s outside the company such as Suppliers, Venders, Customers and so on.
+
+Ex:-  Online Payments(Payment Gateway)
+
+It is used for
+	1.  Exchange large volumes of data
+	2.  Collaborate with partners(Payment Gateways)
+	3.  Share Product Catalogs
+
+Computer Security :- 
+
+It is the protection of computer systems and information from unauthorized use, which allows a user to use the computer while keeping it safe from threats. 
+
+
+CIA Triad in Security 
+
+C :-  Confidentiality
+	Ensuring that data is unavaiable to unauthorized parties, usually  using encryption, ID's 
+	and it's relatd password's. 
+I :-  Integrity
+	Preventing unauthorized parties from altering information and systems. 
+A :-  Availability
+	Ensuring that authroized persons have an access to information when they need it.
+-------------------------------

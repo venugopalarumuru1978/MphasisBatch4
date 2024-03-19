@@ -1,0 +1,232 @@
+Today's Agenda
+--------------
+Computer Fundamentals
+--------------
+What is a Computer?
+	It is an electronic device which accepts data, process data and gives desired Information.
+
+What is a Data?
+		Collection of Raw material, basically which has no meaning for data.
+				or		
+		Collection of facts and figures is a data.
+What is a Process?
+		The work which we do using data.
+What is a Information?
+		The processed data
+--------------------
+		Data  =>  Process  =>  Information
+
+		Input =>  Proess =>  Output
+--------------------
+Computer follows/uses 3 Technologies
+
+1. Hardware Technology
+		It explains about computer parts and pheripharals.
+2. Software Technology
+		It explains about compurer programs
+3. Liveware Technology
+		It explains about human being who works with computer. 
+
+Hardware Technology :- 
+		It explains about computer parts and pheripharals
+
+
+It has been divided into 2 parts
+
+1.  CPU  - Central Processing Unit
+2.  Pheripharals 
+
+What is a CPU?
+	It is a Central Processing Unit(Processor)
+
+	It is a brain of computer where it allows to perform all types of processing actions. 
+
+	It has again 3 sections
+		ALU  :-   Arithematic Logical Unit
+				this unit allows to perform all Arithematic and Logical calculations.
+
+		CU   :-   Control Unit
+				This unit controls all the operations what the user performing.
+
+		MU   :-   Memory Unit
+				This unit allows to store data either temp/permenently.
+
+Memory Unit :-  This unit allows to store data either temp / Permenently. 
+
+This unit again divided into two types
+		
+		Primary Memory
+			This memory allows to store data temp. 
+			This is called as Random Access Memory(RAM).
+				Whenever we type something using any application, 
+				that data directly goes and stores in RAM.
+		Secondary Memory
+			This memory allows to store data permenently. 
+			Once data stored in Secondary Memory, that data can't removed 
+			until we removed. 
+				
+			Again it can be divided into two sections
+				ROM(Read Only Memory)
+					This memory having some instructions which are meant for 
+					starting the computer. 
+					BIOS information
+					It can't be modified and removed.  		
+				Storage Devices
+					Hard Disk Drive(HDD)
+					SSD
+					Pendrives
+					External HDD
+					CD/DVD
+
+	Note : 	Every Memory Device(Primary/Secondary) have some capacity.
+ 
+Memory / Data Measurements :-
+		Computer can't under stand human language, it has it's own language
+		called Binary Language. In this language data / information is re-presented
+		in the form of 1's and 0's. 
+
+		1's or 0's called as BIT.
+
+		8 bits = 1 byte
+		1024  bytes = 1 Kilo Byte
+		1024  KB = 1 Mega Byte
+		1024  MB = 1 Giga Byte
+		1024  GB = 1 Tera Byte
+		1024  TB = 1 Peta Byte
+
+Based on these measurements, disk capacity will be decided. 
+
+RAM :-  4GB RAM, 8GB RAM, 16GB RAM, .....
+HDD / SSD :-   500GB, 1TB, ....
+Pendrives :-   4GB, 16GB, 32GB, 64GB, 128GB, ....
+
+ASCII Values  :-  American Standard Code for Information Interchage. 
+		It is a collection of codes(numbers) for every key in keyboard.
+		these are having from 0 - 255. 
+
+		A - Z :- 65 - 90
+		a - z :- 97 - 122
+		0 - 9 :- 48 - 57
+
+		A - 65, B - 66,.....Z - 90
+
+Similarly ANSI  values -  American National Standard Institute
+
+2. Pheripharals :-
+	Except CPU remaining all the parts of computer is called as Pheripharals. 
+
+	These devices are classified into 3 types
+
+	Input Devices
+		These devices are used to provide input to the system. 
+			Keyboard
+			Mouse
+			Scanner
+			Joystick
+			LightPen	
+	Output Devices
+		These devices are used to provide output of the process/task.
+			Monitor
+			Printer
+				Dot Matrix Printer - Ribbon is used to print something paper
+				Inkjet Printer - Ink bottles exist inside of the printer,
+						to print, bottle ink uses by the printer.
+				Laser Printer -  Some kind of powder exist in cartridge, with that
+					powder, print will be done.
+			Plotter
+	Storage Devices 
+		These devices are used to store information in memory. 
+				There two types of memory
+						Primary 
+							RAM
+						Secondard
+							HDD, SSD, Pendrives, External HDD, 
+Other parts of computers
+		Motherboard   :- This device interconects some other devices like Processor,
+					RAM, HDD, Powerconnections, etc. 
+		Cabinet	      :-  This device is External Box which is used to assemble Desktop
+					computers.   
+		PowerBox	:-  This box supplies power for the computer. 
+		Graphic Card    :-  This device is used, whenever the person is developing games 
+					to play games in computer, graphic card should present. 
+
+
+Whenever the person is purchasing a system(laptop/desktop),
+configurations has to check as per the requirements
+
+Hardware COnfig
+
+1.  Processor
+2.  RAM
+3.  HardDisk/SSD
+4.  Graphic Card
+
+Software COnfig
+Operating System(windows 10/11)
+Linux (Redhat/Ubuntu/Fedora)
+MacOS
+
+Software Technology :- 
+	What is a software ?
+		It is a set of instructions, data  or programs used to operate computers as well as
+		execute specific tasks. 
+
+		These softwares are classified into two types
+
+				A.  System Software
+				B.  Application Software
+
+System Software :- The software which is meant for running any electronic devices. 
+			Ex:-   Operating Systems
+
+What is an Operating System:-
+		It is a heart of the computer, this software communicates with all the devices of 		computer and provides an interface to work with computer. 
+
+		An operating system:-
+			a.  Communicate with Devices(provides device related softwares). 
+			b.  Provides an interface to start work.
+			c.  Whenever we connect any additional/external device, that device also
+			need an software(device drivers) here OS will maintain that device also.
+
+there are different types of Operating systems based on UI
+		1. CUI based Operating Systems
+			Character User Interface(Command Line) UI
+				A.  MS-DOS(Microsoft Disk Operating System)
+				B.  Unix
+		2. GUI based Operating Systems
+			Graphical User Interface based Operating system
+				A. MS - Windows 95/98/2000/Me/XP/7/8/10/11
+				B. Linux - (Redhat/Fedora/Ubuntu/...)
+				C. MacOS - Specifically used for Apple Machines.
+
+Booting :-  The process of loading operating system from disk to primary memory is called booting. 
+
+When we switch on computer, 
+
+1.  Checking BIOS
+2.  Identifies OS
+3.  Starts loading OS from disk to RAM
+4.  Once OS is loaded, it prompt to us either Desktop / Login Screen. 
+---------------
+Application Software :- 
+		These softwares are used to fullfill user requirements. 
+
+		These are classified into two types
+			a.  Packages
+				These are readymade software to perform a specific task/requiment.
+ 				Ex:-  
+					Office Tools(Word/Excel/PowerPoint)
+					Accounting Softwares(Tally/...)
+					Graphic Works(Photoshop/.....)
+			b.  Programming Languages
+				These languages are used to develop applications/softwares. 
+					Ex:-  
+					Basic, Cobol, Pascal, C, C++, Java, Dotnet, ....
+					Databases :- 
+					Dbase, Foxprow, Oracle, SQL Server, MySQL, PostgreSQL, ...
+					Web Based
+					HTML, CSS, JavaScript, jQuery, Angular, React, ....
+
+Liveware Technology :-  It is technology is meant for Human Being. 
+			i.e. No machine works without operating by the human. 
+
