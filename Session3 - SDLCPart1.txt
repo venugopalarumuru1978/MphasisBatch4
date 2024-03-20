@@ -1,0 +1,213 @@
+Today's Agenda
+---------------
+Software Engg - Software Development Life Cycle(SDLC)
+---------------
+What is a Project/Application?
+	It is a process of computerizing a manual process.
+			or
+	It is a process of automazing a task related to particular entity(any firm/org).
+
+There are generalized steps to develop a project
+
+1.  What is ur project?
+		School Management System
+2.  What is an existing system and proposed system
+		Existing System :-  We have to know the functionality of the firm(school)
+				weather it is having any application already or has to develop 
+				new application. 
+				
+				if already having an application
+					has to know that app functionality
+
+		Proposed System :-  What newly need to add to the existing application if already app
+					exist.
+
+					if no application exist, developing new application as per 
+					requriements.
+3.  Modules of the project
+		Students
+			A. Student Registration Process
+			B. Student Examinations
+			C. Student Fees Collection
+			D. Student Games and Sports
+			E. Student Examination Results
+		Employees
+			A. Employees Personal Information
+			B. Employees Job Details
+			C. Employees Salaries Details
+		Library
+			A. Books Details
+			B. Member Details
+			C. Issued Book Details
+4.  System Design
+	Diagrams
+		Flow Charts
+		E-R Diagrams
+		Data Flow Diagrams
+		Unified Modeling Language(UML) Diagrams
+	Database Design
+	Student_Reg:-  AdmnNo  StudentName FatherName Gender Address Location Phone Email Rollno Class
+	Marks  :-   RollNo  StudentName   Exam   Sub1   Sub2  Sub3  Total  Average Results
+	Fees   :-   Rollno  TotalFees   PaidFees  Balance   PaidDate
+	Books  :-   BookNo  BookName  Author  Price  No_Of_Coiies
+
+5.  Hardware and Software Requirements
+	Software Requirements 
+		Prog Lang	: Java
+		Database	: MySQL
+		Operating System: Windows
+	Hardware Requirements
+		Processor	: I3/I7/...	
+		RAM		: 8GB
+		HDD		: 500GB
+		Graphic Card	: ....
+6.  Coding the application
+	Now developers will start developing the application 
+7.  Testing the application
+	Testing Team will start test the application once development is done
+8.  Deploy the application
+	Implementing the application in client enviornment.
+------------------------------
+Software Evalution:- 
+
+It is also known as the s/w engg paradigm, it is the process of creating a software product utilising software engg ideas and methods. 
+
+
+It begins with gathering of requirements. 
+		Then Developers develops a prototype of the application and exhibits to the users / clients to get feedback. if client says yes, the actual development will be started. 
+
+Software Development Paradigms 
+		It is the process of developing application by using software engg concepts
+
+	It consist of 
+			Requirements Gathering
+				Collecting information about the project from the client
+			Software Design
+				Analyze the requirement and preparing project tasks/user stories
+			Programming
+				Start coding for the project
+				Coding
+					Development
+				Testing
+					Test the application
+				Deploying/Integration		
+					Implementation of the application
+
+
+Software Development Life Cycle(SDLC): -
+
+	The process of the SDLC is to generate a large system that satisfies customer expectations, performs effectively and efficiently in the current and projected information technology infrastructure and economical to maintain and enhance. 
+
+SDLC Steps 
+
+1.  Planning
+	The first duration of a development project is included in s/w dev planning. 
+	Analysis and planning, design and development, deployment, production and lunch then 	maintaince are all included in the plan.
+2.  Defining
+	It defines the logical framework of each module as well as interface used to connect with it.
+3.  Designing
+	Design decisions depends on te requirements list we created during the defintion.	 	
+4.  Building
+	The actual Development will be started here. 
+5.  Testing
+	Application will be tested as per the client requirement.
+6.  Deployment
+ 		The SDLC closes with the phase, which puts the product or application into working. 
+
+
+To implement these all phases SDLC provides different models
+
+1.  Waterfall Model
+2.  V Model
+3.  Incremental Model
+4.  RAD Model
+5.  Iteravive Model
+6.  Spiral Model
+7.  Agile Model
+
+Waterfall Model :- 
+
+It is also called as Top to Bottom Approach, it is a cascade SDLC model that includes graudal execution of phases. 
+
+This Model is a breakdown of project activities into linear sequential phases. 
+
+This model is used for smaller or mid size projects. 
+
+V - Model :-
+
+It is an expansion of classic waterfall model. 
+This model is based on associated test stage for every development stage. 
+This is a very strict model, and the next stage is started only after the prvioues phase completed and tested. 
+
+This is also called Validation and Verification Model. 
+
+
+Incremental Model :- 
+
+this model is a SDLC process that distributes requirments into multiple stand-alone modules during the development cycle. 
+
+Project Divides Into Modules and for each module sdlc process implemented then finally all modules are interconnected as an application. 
+
+RAD Model :- 
+
+RAD - Rapid Application Development
+
+Product
+	Generalized Task has been implemented later it has to sold to the required people.  
+Project
+	Live Implementation
+
+It is a Adaptive Software Development is another term for RAD. 
+
+The incremental prototyping technique to software development is known as RAD. 
+
+Here RAD is a concept that states by gathering need through workshops or focus groups. 
+for that needs develop a proto type then demonstrate to the needy people, if they accepts
+that proto type, then same proto type will be used to develop complete application then deliver to the client.
+
+Iteravive Model :- 
+
+This model allows the team to go back in time and visit prior changes where the changes were made. 
+When the SDLC procedure is completed, the project's final result is renewed. 
+
+This model does not need a full set of requirements before starting a project. 
+
+The process is repetitive, allowing it to make new versions of the product for every cycle. 
+
+Spiral Model :- 
+
+This model is a stage-based SDLC  model that integrates architecture and prototyping. it is a hybrid of the iterative and waterfall models. The main purpose of this model is "Risk Assemenet". 
+
+
+The proper time to progress to the next stage must be determined. 
+
+The Solution to this problem is to use the pre-determined time frames.
+
+The transition to the next level taks place as planned. 
+
+Even if the earlier stages work is still not completed, the strategy is based on statstical data gathered from past projects. 
+
+Agile Model :- 
+	A software development apporach based on 
+				Iterative development is referered to as "Agile Process Model".
+
+	It separates projects into smaller iterations/sections and avoids long-term planning. 
+
+	Agile always follows short-term plans. 
+
+	Here Client / Customer Interactions is very important. 
+
+	Customer can view the result of each development section in the Alige and decide if they are 	satisified or not.
+
+	The Scrum Methodology is one of the Agile Model's practical applications. 
+
+	The alternative to the traditional project management are suggested  by the agile process. 
+
+	For Agile process, we have practical implementation  with "JIRA" Software. 
+
+Sprint
+Scrum
+Scrum Master
+Backlog
+Spring Backlog
+Product Backlog
