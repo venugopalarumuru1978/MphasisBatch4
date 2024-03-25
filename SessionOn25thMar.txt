@@ -1,0 +1,190 @@
+Today's Agenda
+---------------
+Java - OOPS Concepts
+---------------
+What is an OOPS? 
+		It is an Object Oriented Programming Structure(OOPS)
+
+OOPS is a programming architecture/Methodology which provides security for the data. 
+
+Basic
+Cobol
+Pascal
+C Lang
+
+The above specified prog lang are called procedure oriented programming languages. 
+
+The OOPS concepts are developed to provide security for the data. 
+
+Object
+Class
+Data Abstraction
+Data Encapsulation
+Inheritance
+Polymarphisum
+
+These concpets are implemeted in different programming languages, those prog lang are called as Object Oriented Programming Languages. 
+
+C++, Java, DotNet Languages(C#.Net, VB.Net, VC++.net, ...), Pythons....
+
+What is a Object?
+		It is a Thing in the real world which has specific attributes and behaviour. 
+
+		Ex:- Car is an Object
+				Attributes
+					Color, Model, Number, Company, Engine Capacity
+					Seating Capacity, ....
+				Functionalities
+					Transporting
+					Changing Gears
+					Use Brakes
+
+An object is not a natural item in the real world, it has to be made up with some other unit. 
+in general we can say that "Blue Print"/Parent Item. 
+
+What is a Class?
+		It is an encapsulted cell which meant for defining attributes and functionalities of 		the object.
+
+		or
+
+		It is a user defined data type. 
+
+As per the java, A class can be created as follows
+
+class  <classname>
+{
+	data members
+
+	member functions
+}
+
+Data Members		:-  these are the variables which holds data.
+				these variables are also called as instance variables.
+				these variables can be used in all the methods of the class.
+
+Member Functions 	:-  these are the user defined functions defined within the class. 
+				so that these are also called as Methods. 
+
+				these methods are used to specify some action for the data members.
+class DemoClass
+{
+	int x, y;
+	
+	void gedata()
+	{
+		x = 100;
+		y = 200;
+	}
+
+	void putdata()
+	{
+		sop(x);
+		sop(y);
+		sop(x+y);
+	}
+}
+
+Object :-   It is an Instance of the class. 
+		or
+	     It is a variable for user defined data type which holds set of attributes and methods.
+
+	<ClassName>  <object> = new <ClassName>([arg]);
+	
+	DemoClass dc1 = new DemoClass();
+
+Once object is created, with the help of object, we can access class members(Data Members & Member Methods)
+	dc1.getdata();
+	dc1.putdata();
+
+An Object can be created within the class where the main() exist.
+	or
+It can also be created in another class.
+
+Access Specifiers :- 
+These are the keywords which allows to specify  how to access class members either inside or outside of the class. 
+
+private		:-  it is used only inside the class.
+public		:-  it is used inside and outside the class.
+
+protected	:-  it is used access one class members into another specific class.
+
+Note :-  by default every class member is a public. 
+-------------------------------
+Classification of Class Members :- 
+
+As per Java, there are two types of class members
+
+1.  Non-Static Members
+2.  Static Members
+
+Non-Static Members :- 
+	these members are default members of the class which has been binded with class object.
+	these are used whenever need multiple copies of data. 
+
+Static Members :- 
+	these members are binded with class, these are used whenever single copy of data is needed. 
+
+Points reg to Static:- 
+
+	1.  These members are created with "static" keyword
+	2.  A static method can handle only static variables whereas Non-static method can handle 
+		both static and non-static variables. 
+	3.  Static variables can be used in all the objects of the class.
+	4.  A static members cannot take any memory inside the object.
+	5.  A static member can access with the help of class. 
+---------------------------------------
+Constructor :-
+It is a special method of the class which has the same name of the class. 
+
+purpose of the constructor is :-  to specify initial process of an object. i.e. to iniilize instance variables at the time of object creation. 
+
+Constructor is not having any return type. 
+
+	classname([arg])
+	{
+		body of the constructor
+	}
+
+Points
+	1.  It calls automatically whenever object is created.
+	2.  It can take parameters, for these parameters we have to pass values at the time object 		creation.
+	3.  A class can have multiple constructors, here every constructor should have diff no of 		parameters.
+-----------------------------------
+Getter and Setter Methods:- 
+
+These are special methods which meant for accessing class private variable outside the class. 
+
+Getter methods are used return value from variable.
+		<return type>  getVariableName()
+		{
+			return <variable>
+		}
+Setter methods are used to store value into a variable as well as validating variable input. 
+		void setVariableName(<arg>)
+		{
+			variable = arg_variable
+		}
+------------------------
+Note :-  
+there is a keyword "this". it allows to separate instance variables and parameter variables are same name.
+-------------------------------------------------------
+Problem Statement :-  Quiz
+
+Whenever we run the code the following output should come
+
+1.  What is the capital city of India?
+a.  Delhi   b. Hyderabad  c. Bangalore
+Answer :a
+It is correct
+
+2.  Whos is our prime minister?
+a. Rahul	b.  Modi	c. 	Karge
+Answer :c
+It is in-correct
+
+Repeat this for 10 questions, once all 10 questions are answered
+Show the score as follows
+		No of Correct Answers / Total no of Question (6/10)
+
+Show the correct answers for Wrongly answered questions
+2.  Whos is our prime minister?  --  b(Modi) 
