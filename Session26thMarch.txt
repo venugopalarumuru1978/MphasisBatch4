@@ -1,0 +1,203 @@
+Today's Session
+---------------
+1. Inheritance
+2. Data Abstraction
+3. Polymarphisum
+---------------
+Inheritance :-
+The process of getting features from existing item to new item is called as Inheritance. 
+
+Purpose :-  
+Reusability of the classes. i.e. using one class attributes and functionalities in another specified class.
+
+Here Existing and New Item both are classes. 
+Existing Item called as Parent/Base/Super classes
+New Item called as Child/Derive/Sub classes
+An inheritance will be created from parent class to child class. 
+
+Parent - Child 
+Base - Derived
+Super - Sub
+
+To create an inheritance b/w parent and child classes, "extends" keyword has to be used. 
+
+class <child classname> extends <parent classname>
+{
+	.....
+	body of the class
+	.....
+}
+
+Note :-  To activate parent class attributes into child class, parent attributes must be protected access specifier.
+
+As per inheritance, no need to create any object for the parent classes, create an object for child classes then call the methods from parent and child classes. 
+
+There different types of inheritances based on it's arrangement of parent and child classes
+
+1. Single
+2. Multi Level
+3. Multiple
+4. Hirarchical
+5. Hybrid
+
+As per java, Multiple parent classes cannot inherited to one child class. So that directly Multiple inheritance cannot implemented with classes. 
+
+Constructors in Inheritance :- 
+------------------
+As per inheritance constructors are having following attributes
+
+1.  A parent class constructor will be executed with the help of child class object, if it not having 	any arguments/parameters. 
+
+2.  Both parent and child class constructors will be executed with child class object, if both 	constructors are not having any arguments/parameters. 
+
+3.  If a parent class constructor having any arguments, then that constructor has to be called in 	child class constructor with "super()" keyword. 
+--------------------------
+Data Abstraction:-
+--------------------------
+Abstraction :-  It is the process of hiding the implementation details and showing only functionality to the user. 
+
+It is the way only showing essential things to the user and hides the internal details.
+
+To Achieve Abstraction
+
+1.  Abstract Classes
+2.  Interfaces
+
+Abstract Class :-   The class which has been defined with abstract keyword is called as abstract class
+			or
+The class which has the body but not allowing to create an object is also called as abstract class.
+
+Rules :- 
+
+1.  It can be created with abstract keyword. 
+2.  It can have abstract and non-abstract methods.
+3.  It cannot allows to create an object. 
+4.  It can have static and constructors. 
+
+Abstract Method :- The method declared within the abstract class with abstract keyword and it's implementation should be in it's child class. 
+
+abstract <return type> method_name([arg]);
+---------------
+Interface :- 
+
+It is also one type of class where it allows only declarations of the methods.
+It can also called pure abstract class. 
+
+syntax :-
+
+interface <interface name>
+{
+	method declarations
+}
+
+Points 
+
+1.  Since an interface is pure abstract class, which must be implemented to it's child class. 
+	here to inherit an interface to the class "implements" keyword is used. 
+
+class <classname>  implements <interface name>
+{
+	method defintions
+} 
+
+2.  A class can implements multiple interfaces, so that here Multiple Inheritance is achieved. 
+3.  An interface allows to implements  loosely coupling concept.
+4.  An inheritance will be established b/w interfaces
+	interface iface1
+	{
+
+	}
+
+	interface iface2 extends iface1
+	{
+
+	}
+
+	class democlass implements iface2
+	{
+
+	}
+5.  A class can inherit one parent class and multiple interfaces, here first parent class then 			interfaces are inherited.
+	class parent
+	{
+	}
+
+	interface iface1
+	{
+	}
+
+	interface iface2
+	{
+	}
+
+	class child extends parent  implements iface1, iface2
+	{
+	}
+----------------
+Polymarphisum :- 
+
+The process of implementing multiple actions on single unit then it is called as Polymarphisum. 
+
+Poly = Many
+Marphisum = Forms  (Many Forms)
+
+As per OOPS, there are two types of Polymarphisums
+
+1.  Overloading
+	It is the process where it allows to provide add on features to the existing item without 	changing it's default action.
+
+	It can be achieved using method overloading.
+
+What is an Method Overloading:- 
+	The process of grouping similar actions  under one unit is called Method Overloading. 
+	To implement this process follow below given rules
+
+	A.  Every method should different no of parameters.
+		void Sample()
+		void Sample(int x)
+		void Sample(int x, float y)
+		void Sample(int x, int y, int z)
+	B. If no of parameters are same, then change the data type of parameter. 
+		void Sample(float x)
+		void Sample(float x, float y)
+2.  OverRiding
+	The replacement features of an existing item is called as OverRiding. 
+
+	This process can be implemented on Method, so that it is called Method overriding. 
+
+To override a method, follow below given rules
+
+1.  Classes must be in Inheritance(IS-A relationship)
+2.  Both parent and child classes must be consist of same content(methods with same name including 	parameters as well as count of methods also). 
+
+How to Implement :- 
+
+A.  Create an object for the parent class then call the methods. 
+B.  Create an object for the child class then assign that object to the parent class object.
+		parentClassObject =childClassObject  (Overriding)
+C.  Now call the methods, it calls child class methods.
+ 
+
+class A
+{
+	public void methA(){
+		Class A
+	}
+}
+
+class B extends A
+{
+	public void methA(){
+		Class B
+	}
+}
+
+
+class Demo
+{
+p s v m()
+{
+B b = new B();
+b.methA();
+}
+}
