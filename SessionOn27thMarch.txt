@@ -1,0 +1,283 @@
+Today's Agenda
+--------------
+1. Inner Classes
+2. Exception Handling
+3. I/O Streams
+---------------
+Inner Classes :- 
+A class within another class is called as Inner Class. 
+
+Purpose :- To use one class private members into another class directly.
+
+
+There are different types of Inner Classes are existed
+
+1. Member Inner Class
+2. Local Inner Class
+3. Static Inner Class
+
+Member Inner Class :- 
+	These are default inner classes, where a class allows to define another class. 
+	 
+class Biodata
+{
+	private int rollno;
+	private String sname;
+
+	void getdata()
+	{
+
+	}
+
+	class Marks
+	{
+		void putdata()
+		{
+
+		}		
+	}
+}
+
+Here we must know that , how to create an object for inner classes.
+
+Steps 
+1.  Create an object for Outer Class
+2.  Create an object for Inner Class with following syntax
+	OuterClass.InnerClass  Object = outerClassObject. new InnerClass();
+------------------------
+Local Inner Class:- 
+
+Here An Inner class can be defined within the outer class method. 
+
+An Inner class defined outer class method, then it is called as Local Inner Class. 
+
+Class  Outer
+{
+
+void get()
+{
+
+}
+
+void put()
+{
+	int p = 100;
+	class Inner
+	{
+		void print(){}
+	}
+	Object Creation as well as call the methods.
+	Inner i1 = new Inner();
+	i1.print();	
+}
+
+}
+
+Outer o1 = new Outer();
+o1.get();
+o1.put();
+
+Points :-   An Local inner class will not allow to access that class outside the method.
+		so that OBject creation and calling methods also has to be done within the outer class 		method only.
+---
+Static Inner Class:- 
+
+These classes are used to handle  static data of the outer class. 
+
+class Outer
+{
+	....
+	static class Inner()
+	{
+
+	}
+}
+
+To create an object for static inner classes
+	OuterClass.InnerClass  <object> = new OuterClass.InnerClass();
+----------------------------------------
+Exception Handling:-
+
+Generally every programming languages specifies that, how to handle errors. 
+As per that, there are 3 types errors we can find
+
+1.  Compile Time Errors
+2.  Run Time Errors
+3.  Logical Errors
+
+Compile Time Errors :- 
+
+These errors occures at the time of coding / at the time of compiling. 
+	1. Missing Semi Colon/Missing Double Quotes/...
+	2. Im-Proper usage of Methods/Classes/Object Creation(Syntax errors)
+
+Run Time Errors :- 
+
+These errors occurs at the time of program execution. 
+	1. Invalid Inputs of the program
+	2. Invalid Operations of the program
+	3. Index values are missing for array / string ....
+
+Note :-  Run time error occurs when user performs invalid operations. 
+
+Exception Handling :-  It is the process of handling runtime errors. 
+An Exception is a abnormal situation where it raise an error. 
+
+As per Java, there are couple of keywords   try, catch, finally, throw, throws
+
+In Java, every abnormal situation is already identified and given in the form of a "class". 
+i.e. It provides different predefined classes to handle exceptions in java. 
+
+All the Exception Classes are child classes of "Exception" Parent class. 
+Exception class is able handle any type of exception raised in the program. 
+
+try :-  
+This block is used to identify an exception, if it found then it sends to another block called as 		catch.
+
+catch :-   This block recieves an exception information from try block and allows to perform 		alternative action/process. 
+
+try
+{
+	......
+	Actual Program
+	......
+}
+catch(ExceptionName Obj)
+{
+	.....
+	Alternative Process
+	.....
+}
+
+A try block can have multiple catch blocks, each catch block is able to handle one specific exception.
+Here we must know, exception class name. 
+
+finally :- This keyword allows to execute a block of stmts irrespective of exception.
+		i.e. weather program may or may not raise an exception, this block will be executed.
+
+Classification of Exceptions:- 
+
+There are 3 types of Exceptions
+
+1.  Un-Checked Exceptions
+	These exception won't check any exception at the time of compilation/coding by the JVM.
+	here exceptions identified at the time program execution when user performs any invalid 	operation. 
+
+	To handle these exceptions, we have to try-catch blocks. 
+
+2.  Checked Exceptions
+	These exceptions are checked by the JVM at the time of coding/compilation.
+	i.e. before executing the program.
+
+	here by using "throws" keyword, we have to handle those execptions. 
+
+	void methodname(...) throws <Excep-1, Except-2, ...>
+	{
+		
+	}
+
+3.  User Defined Exceptions
+	These exceptions are created by the user and handled by the user itself. 
+	
+	Steps :- 
+	1. Create a class and extends Exception class, it must consist of constructor with super()
+		keyword
+
+		class <classname> extends Exception
+		{
+			constructor(<arg>)
+			{
+				super(arg);
+			}
+		}
+	2.  Raise that exception whenever we need in the program with "throw" keyword
+			throw  new <classname>(<arg msg>)
+	3.  Handle that exception in catch block
+
+-------------
+read() :- This method allows to read a character from keyboard and it returns it's ascii value. 
+------------------
+I/O Streams :- 
+
+What is a stream?
+	It is a sequence of Bits and Bytes flowing from one medium to anothe medium. 
+
+	Java provides 3 standard streams to perform operations
+
+		1.  System.out = Moniter
+		2.  System.in  = Keyboard
+		3.  System.err = Error Print
+
+
+As per java there are 2 types of steams exist
+
+		1.  InputStream
+			InputStream class is an abstract class. 
+			It is the superclass of all classes representing an input stream of bytes.
+
+1) public abstract int read() throws IOException	
+	    reads the next byte of data from the input stream. It returns -1 at the end of the file.
+2) public int available() throws IOException	
+	    returns an estimate of the number of bytes that can be read from the current input stream.
+3) public void close()throws IOException	
+		is used to close the current input stream.
+----------------------------------------------------
+		2.  OutputStream
+   	OutputStream class is an abstract class. 
+	It is the superclass of all classes representing an output stream of bytes. 
+	An output stream accepts output bytes and sends them to some sink.
+
+Method	Description
+1) public void write(int)throws IOException	
+			is used to write a byte to the current output stream.
+2) public void write(byte[])throws IOException	
+			is used to write an array of byte to the current output stream.
+3) public void flush()throws IOException	
+			flushes the current output stream.
+4) public void close()throws IOException	
+			is used to close the current output stream.
+--------------------------------------------------------
+File I/O Operations:- 
+
+FileInputStream and FileOutputStream classes used to perform File Operations
+
+FileOutputStream:-  This class is used to create a new file allows towrite data into that files. 
+
+	FileOutputStream   <object> = new FileOutputStream("file name");
+
+Ex:-  Read some data from keyboard and store that data into a file. 
+
+FileInputStream :-  This class is used to open file in read mode and allows to read data from file. 
+
+FileInputStream  <object> = new FileInputStream("file name");
+
+Ex:-  Read data from file and present it on moniter.
+
+
+FileWriter  & FileReader :-
+
+FileWriter :- This allows to write character oriented data into file directly. 
+	FileWriter  <Object> =new FileWriter(file name, true/false)
+
+Note :-  this class allows to append data if file already exist.
+		true = append data
+		false = replacing data
+
+FileReader :-  This class allows to open file in read mode. 
+			FileReader <object> = new FileReader(filename);
+
+BufferedReader :-  this class allows to read data from inputstream with readLine() method. 
+
+		BufferedReader  <object> = new BufferedReader(inputstream reader object)
+
+File :-  this class allows to perform different operations file or folders. 
+
+	File <object> = new File(fileame/foldername/loc);
+
+createNewFile() :- it allows to create a new empty file.
+mkdir() :-  it allows to create a folder
+exists() :-  it allows to check a file / a folder exist or not.
+isFile() :- it allows to check given name is file or not. 
+isDirectory() :-it allows to check given name is folder or not.
+delete() :-  it allows to delete a file/folder.
+list() :-  it allows to retrive all files and folder names from specified location. 
