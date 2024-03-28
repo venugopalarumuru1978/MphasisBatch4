@@ -1,0 +1,118 @@
+Today's Agenda
+--------------
+Examples on File I/O Operations
+Collections
+--------------
+Collections
+What is a Collection?
+It is the process of grouping set of objects under one unit.
+
+Framework :- 
+It is a readymade enviornment to perform certain tasks. 
+
+Collection Framework:- 
+It is a process of performing different operations on group of objects.
+
+1. Adding
+2. Modifing
+3. Deleting
+4. Viewing
+5. Searching
+6. Sorting
+
+Note :- To work with Collection, add java.util package. 
+
+What is Collection framework
+The Collection framework represents a unified architecture for storing and manipulating a group of objects. It has:
+
+Interfaces and its implementations, i.e., classes
+Algorithms 
+
+
+Methods from Collection Interface
+------------
+public boolean add(E e):-
+		It is used to insert an element for the collection.
+
+public boolean addAll(Collection<? extends E> c)
+	It is used to insert the specified collection elements in the invoking collection.
+
+public boolean remove(Object element)	
+	It is used to delete an element from the collection.
+
+public boolean removeAll(Collection<?> c)
+	It is used to delete all the elements of the specified collection from the invoking 				collection.
+public int size()	
+	It returns the total number of elements in the collection.
+
+public void clear()	
+	It removes the total number of elements from the collection.
+
+public boolean contains(Object element)
+		It is used to search an element.
+
+public boolean containsAll(Collection<?> c)	
+		It is used to search the specified collection in the collection.
+----------------------------
+
+Collection Interface having 3 child interfaces
+	List
+	Set
+	Queue
+
+List :- 
+List is  the facility to maintain the ordered collection of elements. 
+It contains the index-based methods to insert, update, delete and search the elements. 
+It can have the duplicate elements also. We can also store the null elements in the list.
+
+
+List Interface is implements following classes		
+	ArrayList
+	LinkedList
+	Vector
+	Stack
+
+ArrayList :- 
+Java ArrayList class uses a dynamic array for storing the elements. 
+It is like an array, but there is no size limit. 
+We can add or remove elements anytime. 
+So, it is much more flexible than the traditional array. 
+
+	List<Data Type> <object> = new ArrayList<Data Type>();
+
+Iterator :-  This interface is used to traverse values from any collection in forward feature. 
+		Iterator  <object> = collectionObj.iterator();
+
+It has two methods
+hasnext() :-  it will check value exists or not in a specified location of collection obj. 
+next() :-  It will return  value from the existancy colletion and move cursor to next postion of collection obj.
+
+
+LinkedList :-
+It is  as same as ArrayList, but it uses doubly linkedlist process for storing of values. 
+ArrayList is slower than LinkedList when we are performing deletion operation. 
+		List<Data Type> <object> = new LinkedList<Data Type>();
+Vector :- 
+It is also uses to store data in dynamic array format. i.e. it is similar to ArrayList. 
+It is synchornised object. i.e. it allows only sequantial process. 
+It is has poor performance. 
+	List<Data Type>  <object> = new Vector<Data Type>();
+----------------------------------------------------------------------------------
+Set Collection :- 
+It is an interface, which represents the collection  unordered set of elements which doen't allows to store duplicate values. 
+
+It has following implemented classes
+	HashSet, LinkedHashSet, TreeSet
+
+HashSet :- 
+	It represent the collection of unordered data. It won't allows duplicate values. 
+	It won't maintain index numbers. 
+
+	Set<Data Type> <object> = new HashSet<Data Type>();
+
+LinkedHashSet :-  It represents collection ordered data. it maintains unique values. 
+	Set<Data Type> <object> = new LinkedHashSet<Data Type>();
+
+TreeSet :- It represents collection of sorted data in asending order. It maintains unique vaues. 
+	Set<Data Type> <object> = new TreeSet<Data Type>(); 
+-----------------------------
