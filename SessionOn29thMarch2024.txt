@@ -1,0 +1,164 @@
+Today's Agenda
+---------------
+1. Map Collection
+2. Sorting using Collection
+3. Multi Threading
+----------------
+Map Collection:- 
+It is also one of the Collection, where it allows maintain data in the form of "Key:value" pairs. 
+Actually  Map Collection is sub interface of collection interface. 
+
+It has following props
+
+1.  A map should contain duplicate keys.
+2.  Key should not modify, only values can modify based on key.
+3.  Map maintains unordered collection of key-value pairs.
+4.  It has following 3 implemented classes
+		HashMap, LinkedHashMap, TreeMap
+
+HashMap :-  It maintain collection of keys and their values but it is unordered. 
+Map<key data type, value data type>  <object> = new HashMap<key data type, value data type>();
+
+
+LinkedHashMap :- It maintain  ordered collection of keys and their values. 
+			Map<key data type, value data type>  <object> = 
+						new LinkedHashMap<key data type, value data type>();
+
+TreeMap :-  It maintains sorted ordered collection of keys and their values. 
+	Map<key data type, value data type>  <object> = new TreeMap<key data type, value data type>();
+
+It has following methods :- 
+
+put(key, value) :-  it allows to add key-value pair into map collection. 
+get(key) :-  it allows to print value based on key. 
+isEmpty() :-  it allows to check map colection is empty or not. 
+size() :- it allows to count  no of keys are present in collection. 
+containsKey(key) :- it allows to search a key in map collection.
+containsValue(val) :- it allows to search a value in map collection.
+keySet() :-  it allows to get all the keys from the map colletion and returns as a set collection.
+remove(key) :-  it allows to remove a key from collection. it also delete's it's relavent value. 
+
+Entry<key, value>  :-  This interface allows to return key and value from  map collection. it has to 					be used in for loop only. 
+entrySet() :-  it allows to get a key-value pair. 
+here to print only key :-  getKey()
+here to print only value :-  getValue()
+
+replace(key, new value):-  it allows to change value based on key.
+----------------------
+Sorting using Collection:- 
+
+To work with sorting for class objects there are two Interfaces
+
+Comparable and Comparator
+
+Comparable :-  this interface will be compares one object with other object of the same class based on particular key(variable). 
+
+here internally  CompareTo() method will work. 
+
+1. Comparable Interface has to implement to the class where variable/ data exist.
+
+class Student  implements Comparable<Student>
+{
+	// getters and setters
+	// constructors
+@Override
+	public int compareTo(Student s1) 
+	{
+		return Integer.compare(getRollno(), s1.getRollno());
+	}
+	
+}
+
+Comparator :- It is also an interface which  as same as Comparable but it allows multiple field sortings where comparable not allows. 
+
+for this kind of interface, 
+
+we have to create separate classes for every sorting without distrubing POJO class.
+
+class  SortingBasedOnRollNumber implements Comparator<Student>
+{
+		public int compare(Student s1, Student s2)
+		{
+
+		return Integer.compare(s1.getRollno(), s2.getRollno());
+		}
+}
+------------------------------------------------------------------------------------------------------
+Multi Threadig:- 
+---------------
+What is a Thread?
+
+Thread is a process/task. 
+
+Multi Threading is a process of executing  multiple tasks at a time. 
+
+Till now the programming is done comes under Single Threaded Programming. 
+
+Purpose of the Multi Threading is to execute multiple independent tasks at a time.
+		1. Gaming Programming
+		2. Parellel Processing
+
+
+To work with Multi Threading :-
+-------------------
+There are two ways 
+	1. Using Thread Class
+	2. Using Runnable Interface
+
+Thread Class :-  It is an abstract class which has some methods as follows.
+		
+		run() :-  it is an abstract method, by using this method only, we have to define task.
+		start() :-  it is used to start thread execution process.
+		sleep() :-  it is used to suspend thread process for a particular period of time. 
+
+Runnable Interface :-  it is an interface which has only one abstract method by name run().
+
+Using Thread Class:- 
+--------------------
+a.  Create a class and extend Thread class
+b.  Define run() method with a task which want's execute in threading. 
+c.  Create an object for the class, then use start() method  to execute thread.
+
+Using Runnable Interface:-
+--------------------------
+a.  Create a class and implements Runnable interface
+b.  Define run() method with a task which want's execute in threading.
+c.  Create an object for user-defined Class.
+d.  Create an object for Thread Class, while creating an object, pass user-defined class object as 	constructor parameter.
+e. Now execute thread with Thread class Object by using start method.
+---------------------------------------------
+Life Cycle of the Thread :-
+
+There are 5 stages of the Thread Life Cycle
+
+a. New Born State
+	It is a state where just creating an object for thread class.
+b. Runnable State
+	It is a state where all the threads making availability for the process to the processor, it 	will be done by	start() method.
+c. Running State
+	It is a state where a thread being executed  by the processor, i.e. calling of the run() 	method. 
+d. Blocked State :-  It is a state where thread being suspended for a finite period of time / until 			user resumes the thread execution. 
+				sleep(), suspend(), ...
+e. Dead State:-  It is a state where thread will be deleted once run() method process is completed. 
+-------------------------------------
+Naming Thread :- As per the Threading concept, Everey thread created by us, processor will give a name. Those  name's like  Thread-0, Thread-1, Thread-2, ..... And it will provide changing a name for that thread also.
+
+getName() :-  it is meant for showing thread name.
+setName(string) :- it is meant for changing the thread name.
+---------------------
+Priority Thread :-  It is the process of which thread should execute first.
+Usually threads are executed randomly based on processor priority. But here Thread Priorities will give a facility for making thread executions in an order. But it is not guaranteed, because it is depends on JVM. 
+
+Priorites are represented by a number between 1 and 10. Thread priorties will be taken care by the thread schedular. 
+
+getPriority() :-  it shows present priority of the thread. 
+setPriority(integer) :-  it allows to set priority of the thread. 
+
+there are 3 priority constants exists
+
+MIN_PRIORITY  =  1
+MAX_PRIORITY  =  10
+NORM_PRIORITY =  5
+
+the thread which is having MAX prority, that will execute first.
+-------------------------------
