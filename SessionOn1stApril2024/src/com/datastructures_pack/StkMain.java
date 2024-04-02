@@ -28,6 +28,5 @@ public class StkMain {
 			stk.ShowValues();
 			stk.pop();
 			stk.ShowValues();
-
 	}
 }

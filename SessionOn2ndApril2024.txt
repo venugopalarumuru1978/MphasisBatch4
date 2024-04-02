@@ -1,0 +1,92 @@
+Today's Agenda
+---------------
+1. Stack
+2. Queue
+3. LinkedList
+---------------
+Stack :- It is one of the Linear DS to store colletion of objects/elements. 
+	it follows a rule  called as "Last-In-First-Out".
+
+Points to remembers:- 
+	if stack is returning 
+			-1  =it is empty
+			0  = it has only one element
+			n-1  =  it has full of values
+			n = the stack is overflow.
+As per java, stack will be discussed with Collections.
+
+Stack is a predefined class and it has following methods. 
+
+push() :-  to add an element to the stack
+pop() :-  to remove an element from the stack
+isEmpty() :- it is used check stack is empty or not
+peek() :- which returns last element from the stack.
+-----------------------------------------------------------------------
+Queue :-  it is also one of the Linear DS to store collection of objects/elements. 
+			it follows a rules called as "First-In-First-Out".
+Operations :- 
+Enqueue(add()) :-  to add elements to the queue
+Dequeue(poll()) :-  to delete elements from the queue
+isEmpty :- to check empty or not
+isFull  :-  to check full or not
+peek :-  it return a first value without removing value. 
+
+As per the collection there is an interface "Queue", and it has set of implemented classes. 
+-----------------
+Linked List :-  It is also a linear type of data stucture, where it allows to store data in the form of nodes randomly. 
+
+Linked List again classified into 3 types
+
+Single Linked List
+	In this process a there node which has data and address sections. 
+		one node address will be stored into another node. so that final node having null address but data existed
+
+Algorithm:-
+1. Create a class with anyname
+
+2. Create a inner class Node which has two attributes:  data and next is a pointer to the next node.
+---------------
+Double Linked List
+----------------------------
+Circular Linked List
+
+It is a kind of linked list where head  node address will be stored in last node of the linked list.
+----------------------------
+
+What is a Node?
+
+A node is a memory block which holds data and address of the another node. 
+----------------------------------------------------
+Sorting Techniques :- 
+
+There are different sorting techniques to sort data either in asending or desending order. 
+
+1.  Bubble Sorting
+2.  Insertion
+3.  Selection
+4.  Merge
+5.  Quick
+6.  Counting 
+7.  Radix 
+8.  Bucket
+9.  Shell
+10. Heap
+-----------------------
+We are going to discuss 
+1.  Bubble Sorting
+
+Algorthim :- 
+take 1st value, then campare with all other values weather those values bigger or not from 1st value, if bigger, then swap the value in their respective positions. 
+
+This has to repeat until  all values gets sorted order. 
+2.  Insertion
+3.  Selection
+4.  Counting 
+5.  Radix 
+------------------------
+Searching Methods
+
+1.  Unary Search
+2.  Binary Search
+-------------------
+
