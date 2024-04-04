@@ -1,0 +1,31 @@
+class budget
+{
+	static long  m_budget;
+
+	getter and setter
+
+}
+
+class expenses
+{
+	String category, description;
+	long exp_amt;
+	Date  dateofexp;
+
+	getters and setters
+
+	if required use constructor
+}
+
+
+class  DemoBudget
+{
+	public static void main()
+	{
+		Budget.setM_budget(20000);  // setter
+
+		List<expenses>  lstexp = new ArrayList<expenses>;
+
+		add your logic
+	}
+}

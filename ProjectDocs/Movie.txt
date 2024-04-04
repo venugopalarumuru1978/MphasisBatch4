@@ -1,0 +1,54 @@
+class Theatre
+{
+	String seats[][];
+	String ShowTime[];
+	Theatre()
+	{
+		seats[][] = {{"A1", "A2", "A3","A4","A5"},
+				{"B1", "B2", "B3","B4","B5"},
+				{"C1", "C2", "C3","C4","C5"},
+				{"D1", "D2", "D3","D4","D5"},
+				{"E1", "E2", "E3","E4","E5"}};
+		ShowTime = {"10:00AM", "02:00PM"};
+	}
+}
+
+class Movie
+{
+	String CustomerName;
+	int noofTickts
+	float tktPrice;
+	float totalAmt;
+	Date ShowDate;
+	String stime;
+	String seatnumbers[];
+
+	getters and setters
+
+	constructors if required.	
+}
+
+
+1.  Show Available Seats as well as Show Date and Time
+2.  Book Tickets
+3.  Exit
+
+Select an Option :1
+Input Date and show Time
+
+Date :- 25-09-2023
+Time :  10:00AM
+
+A1  A2  A3  A4  A5
+B1  B2  B3  B4  B5
+C1  C2  C3  C4  C5
+D1  D2  D3  D4  D5
+E1  E2  E3  E4  E5 
+
+Note :  Booked Seats should show in red color. (System.err.println())
+
+Select an Option :2
+Input CustomerName, Date, ShowTime, nooftickts, price
+Input SeatNumbers(String) ((B2,D5,E4)/(E1-E5)
+
+Display Total Amount.

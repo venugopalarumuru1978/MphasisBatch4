@@ -1,0 +1,126 @@
+
+1.  Add Property and Calculate Tax
+2.  Add Vechicle and Calculate Tax
+3.  Show Following Details
+4.  Exit
+
+Selet an Option : 1
+	Code for Add Property and Tax Calculation
+
+1.  Add Property and Calculate Tax
+2.  Add Vechicle and Calculate Tax
+3.  Show Following Details
+4.  Exit
+
+Selet an Option : 2
+	Code for Add Vechicle and Tax Calculation
+
+1.  Add Property and Calculate Tax
+2.  Add Vechicle and Calculate Tax
+3.  Show Following Details
+4.  Exit
+
+Select an Option : 3
+	1. Show Total No of Properties and it's Amount
+	2. Show Total No of Vechicle and it's Amount
+	3. Total Tax payable amount from Properties and Vechicles
+	4. Back
+
+Select a suboption : 1
+	Show all property names and their tax
+			at last show total tax paid
+	
+	Sahasra Nilayam		10000/-
+	Lakshmi's House		20000/-
+		-----------------------
+	Total			30000/-
+
+1. Show Total No of Properties and it's Amount
+2. Show Total No of Vechicle and it's Amount
+3. Total Tax payable amount from Properties and Vechicles
+4. Back
+
+Select a suboption : 2
+	Show all vechicle names and it's tax
+			at last show total tax paid
+	
+	Activa			 3000/-
+	Varna Car		10000/-
+		-----------------------
+	Total			13000/-
+
+
+1. Show Total No of Properties and it's Amount
+2. Show Total No of Vechicle and it's Amount
+3. Total Tax payable amount from Properties and Vechicles
+4. Back
+
+Select a suboption : 3
+	Show all  Property & vechicle total tax amount 
+			at last show total tax paid
+
+	Property Total Tax 	:  30000/-
+	Vechicle Total Tax	:  13000/-
+	----------------------------------
+	Total 			   43000/-
+
+1. Show Total No of Properties and it's Amount
+2. Show Total No of Vechicle and it's Amount
+3. Total Tax payable amount from Properties and Vechicles
+4. Back
+
+Select a suboption : 4
+
+1.  Add Property and Calculate Tax
+2.  Add Vechicle and Calculate Tax
+3.  Show Following Details
+4.  Exit
+-----------------------------------------------
+class Property
+{
+	int propID;
+	double basevalueofland;
+	char  isInCity;
+	int  ageofProp;
+	double propertytax;
+
+	add getters & setters
+	add two constructors(without parameters, with parameters) 
+
+}
+
+class Vechicle
+{
+	int regnumber
+	String brand
+	double cost;
+	int velocity;
+	int capacity;
+	String vechType;
+	double vechTax;
+
+	add getters & setters
+	add two constructors(without parameters, with parameters)
+}
+
+class PropertyOperations
+{
+	method for AddPropertyDetails
+	method for ViewPropertyDetails
+	method for CalculatePropertyTax
+}
+
+class  VechicleOperations
+{
+	method for AddVechicleDetails
+	method for ViewVechicleDetails	
+	method for CalculateVechicleTax
+}
+
+class TaxMain
+{
+	public static void main()
+	{
+		code for as output is required.		
+	}
+}

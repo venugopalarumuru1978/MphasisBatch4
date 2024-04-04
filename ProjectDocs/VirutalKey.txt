@@ -1,0 +1,37 @@
+Create a folder in specified location of disk then add all the files in that folder as per this application. 
+
+
+1.  Show All File Names
+2.  Business Level Operations
+3.  Exit
+
+Option 1 :
+Show all the list of files already created in asending order.
+
+Option 2 :
+	1.  Add File
+	2.  Delete File
+	3.  Search File
+	4.  Back
+
+	Sub Opt - 1 : Functionality for Creating new file
+	Sub Opt - 2 : Delete an existing file
+	Sub Opt - 3 : Search A file
+	Sub Opt - 4 : return to main menu
+
+Option 3 :
+	Exit from application
+--------------------------------
+
+1. Camera Rental System
+2. Tax Calculting
+3. Budget Tracker
+4. Movie Tickets
+5. Virtual keys
+
+-----------------
+
+you need to submit following items for the evalution of the project
+
+a.  document(sprint details, flow of the project, screenshots, steps to execute)
+b.  code in git repo
