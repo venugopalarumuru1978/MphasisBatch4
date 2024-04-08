@@ -1,0 +1,197 @@
+Phase 2 Content
+----------------
+Servlets
+JDBC
+Hibernate
+JSP
+----------------
+Today's Agenda
+---------------
+Basics of Web Server
+Introductions to Servlets
+---------------
+What is a Web Page?
+
+What is a Website/Web Application?
+
+What kind of information present in Web Page?
+
+Any information can be presented in a web page for particular entity. 
+	That information can be classified into 4 types
+			1.  Textual Info
+			2.  Images
+			3.  Audio
+			4.  Video
+To Create the web pages, we required following languages and technologies
+
+1.  Markup Languages
+	HTML, DHTML, XML, XMAL, XHTML, ...
+2.  Scripting Languages
+	JavaScript, jQuery, ....
+3.  Technologies
+	Java - Servlets, JSP, ...
+	Dotnet - ASP.Net, ASP.Net MVC, ....
+	Php - Php
+	Python - Django
+4.  Desinging Tools
+	using these tools web page can be designed. 
+	Dream Viewer
+	Photoshop
+--------------------
+Java Developer
+	1. Markup Languages - HTML, DHTML(CSS), ....
+	2. Scripting Languages - JavaScript, jQuery, ...
+	3. Servlet, JSP, 
+
+DotNet Developer
+	1. Markup Languages - HTML, DHTML(CSS), ....
+	2. Scripting Languages - JavaScript, jQuery, ...
+	3. ASP.Net, Asp.Net MVC
+
+Php Developer
+	1. Markup Languages - HTML, DHTML(CSS), ....
+	2. Scripting Languages - JavaScript, jQuery, ...
+	3. Php
+
+Python Developer
+	1. Markup Languages - HTML, DHTML(CSS), ....
+	2. Scripting Languages - JavaScript, jQuery, ...
+	3. Python basics, Django
+-------------------------
+What is a Web Server?
+	It is a software where it allows send  a request from client to the server and provides 	response from the server to cleint. 
+	
+	It simpli says that how to execute a web page from server. 
+
+	As per java there are different web servers exist
+
+		1. Apache Tomcat
+		2. Web Logic
+		3. Glassfish
+
+	Once installed / Configured any one of Web Server, it is ready to execute web pages.
+
+	Web Server having an IP Address/Server Name. 
+		if web server is exist in local system
+			http://127.0.0.1  = Local System IP Address
+			http://localhost  = Local System Server Name
+	Every Server also needed an Port Number
+			by default port number is 8080.  if required we can change it. 
+			http://127.0.0.1:8080/
+			http://localhost:8080/
+
+Steps to Configure Tomcat Web Server to Eclipse
+
+1.  Download ZIP file of tomcat server and extract it into specific folder. 
+2.  Open Eclipse, Click on "Servers" Tab in bottom section
+3.  Click on Link what it is showing over there, then follow the steps. 
+4.  To execute Particular page, right click on web page - Run on Server - follow the steps. 
+
+
+Note :- To change port number, doubleclick on server - change port number whereever it exist 8080
+
+---------------
+What is a Servlet?
+	It is a web technology which meant for creating server side web applications. 
+
+difference b/w static web page and dynamic web page
+
+Static Web Page :-  the page content will not be changed. 
+Dynamic Web Page :-  the page content will be changed according to the request and response. 
+
+Before Servlets, for creating dynamic web pages, CGI Script - Common Gateway Interface Script. 
+
+---
+
+=>Servlet is an API that provides many interfaces and classes including documentation.
+=>Servlet is an interface that must be implemented for creating any Servlet.
+=>Servlet is a class that extends the capabilities of the servers and responds to the incoming 	requests. It can respond to any requests.
+=>Servlet is a web component that is deployed on the server to create a dynamic web page.
+
+The javax.servlet and javax.servlet.http packages represent interfaces and classes for servlet api.
+
+The javax.servlet package contains many interfaces and classes that are used by the servlet or web container. These are not specific to any protocol.
+
+The javax.servlet.http package contains interfaces and classes that are responsible for http requests only.
+
+What is a Protocal?
+A protocal is a rule to perform a task on web.
+
+http :-  Hyper Text Transfer Protocal
+		By using this protocal data can be trasfered from server to client and vice versa.
+https:-  It is as same as http with security feature. 
+ftp :-    File Transfer Protocal
+smtp :-   Simple Mailer Transfer Protocal
+
+A browser is a multi protocalled based application to interact with web pages.
+---
+Servlet interface provides common behavior to all the servlets.
+Servlet interface defines methods that all servlets must implement.
+
+There are 5 methods in Servlet interface. The init, service and destroy are the life cycle methods of servlet. These are invoked by the web container.
+
+public void init(ServletConfig config)	
+initializes the servlet. It is the life cycle method of servlet and invoked by the web container only once.
+
+public void service(ServletRequest request,ServletResponse response)
+		provides response for the incoming request. It is invoked at each request by the web 			container.
+			It will be executed again and again whenever request is made. 
+public void destroy()	
+		is invoked only once and indicates that servlet is being destroyed.
+public ServletConfig getServletConfig()	
+			returns the object of ServletConfig.
+public String getServletInfo()	
+		returns information about servlet such as writer, copyright, version etc. 
+------
+GenericServlet class implements Servlet, ServletConfig and Serializable interfaces. It provides the implementation of all the methods of these interfaces except the service method.
+
+GenericServlet class can handle any type of request so it is protocol-independent.
+---
+The HttpServlet class extends the GenericServlet class and implements Serializable interface. It provides http specific methods such as doGet, doPost, doHead, doTrace etc.
+-------------
+How to create servlet in web application:- 
+
+1.  Create a Dynamic Web Application using Eclipse
+2.  Create a Servlet as follows
+	right click on src/main/java - new - servlet
+		follow the next steps
+3.  Add servlet-api.jar from tomcat server. 
+---------------
+
+As per Servlets Concept :- 
+	Designing -  use HTML Pages
+	Functionality - use Servlet Pages
+-------------
+How to execute servlet with html page?
+
+1.  Create an HTML and Servlet Pages. 
+2.  Define action for the Servlet Page. 
+3.  In Html Page, use form tag as follows
+	<form  method = "POST" action = "servlet name">
+		<input type="submit"  value="some text" />
+	</form>
+
+What are the POST and GET:- 
+
+POST AND GET are the request types for the server. Along these two there are other two request types are existed, those are PUT and DELETE. 
+
+POST    :-   To send something to the server. 
+GET	:-   To get something from the server.
+PUT 	:-   To modify something into the server.
+DELETE	:-   To delete something into the server. 
+
+submit :- button is allows to submiting the web page to the server. 
+action :- attribute is meant for executing a page. it might be servlet/html page/js page/...
+----
+How to send data from html page to servlet page?
+1.  Create an HTML and Servlet Pages. 
+2.  In Html Page, use form tag as follows
+	<form  method = "POST" action = "servlet name">
+		<all input tools>
+		<input type="submit"  value="some text" />
+	</form>
+3.   Html page tool values can be access into servlet by following method
+		String variable = request.getParameters("toolname")
+4.  Execute html page. 
+
+
