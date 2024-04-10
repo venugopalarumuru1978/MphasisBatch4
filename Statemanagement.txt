@@ -1,0 +1,83 @@
+Today's Agenda
+---------------
+1. State Management
+	Session
+	Cookies
+	URL Rewriting
+2. JDBC
+---------------
+What is a State Management?
+
+	It is the process of managing state of the user b/w web pages of the application. 
+	http and https are the stateless protocals. Simpli We can call it every page is a stateless 	pages. i.e. the pages won't allows to share any data b/w pages.
+	So that to share data b/w pages, state management gives following concepts
+
+	Session
+	URL Rewriting
+	Cookies
+
+What is a Session?
+	Whenever user sends a request to the server, the web server allocates a block of memory for 	that request(client) in server, that memory is called session memory/session.
+
+	Session allows to store/modify/delete any data. 
+	Once data is stored in session, that can be access in every page the application. 
+
+	Following classes and methods can use to work with Session. 
+
+	HttpSession :-  this class object allows to store session created on server. 
+	
+	HttpSession  <object> = request.getSession();
+	
+	setAttribute(key, value) :- this method allows to store data into session.
+	getAttribute(key) :-   this method allows to get value from session based on key.
+	getID :-  it allows to show/get id generated for the session. 
+	setInactiveInterval(integer) :- to set max interval time for inactive
+	getInactiveInterval() :-  to get max interval time of inactive
+
+What is a URL Rewriting?
+	The process of sending only textual data from one page to another page along redirect() 		statment is called URL Rewriting.  
+
+	Steps :- 
+
+	In source page, define variable and it's related value then add that variable to the 
+	redirect() statement as follows
+
+	response.sendRedirect("pagename?variable=value&variable=value&.....)
+
+	In Destination page, access that variable from url as follows
+
+	variable = request.getParameter(variable)
+
+What is a Cookie?
+	It is a small amount of memory where it allows to textuzl data in client side browser memory.
+
+	As per the cookies, 
+		there are two types of cookies
+			1. In-Memory Cookie
+				This type of cookies stores data temp as well as once we close browser
+				all the cookie info related to that application will be deleted
+				automatically. 
+
+			2. Persistant Cookie
+				This type of cookies allows to store data for a particular period of 				time in browser, so that this info can be accessed once we close and 				open browser also.
+How to create a cookie?
+	Cookies class is used to create a cookie. 
+		Cookie <object> = new Cookie("cooki name", "value")
+	Once cookie object is created, that has to add to the browser
+		response.addCOokie(cookieObj)
+
+How to access cookies?
+	
+	All the cookies are stored in the form of array in browser memory. So that to access those 
+		Cookie  ArrayObject[] =  request.getCookies();
+	here first cookie is always for system(SessionID)
+		from index - 1 onward our cookies can access as follows
+
+		to get Cookie Name :- getName()
+		to get Cookie Value :- getValue()
+
+To Make persistant  cookie, we have to set max time for the cookie at the time of creation
+			cookieObj.setMaxAge(time in sessions)
+
+
+	
