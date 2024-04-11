@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p style="text-align: center;">
+		<a href="AddStd.html">New Student</a>
+		&nbsp;&nbsp;&nbsp;
+		<a href="ViewStudents">View All Students</a>		
+	</p>
+	<hr />
+<form method="post" action="AddStudent">
+	<p style="text-align: center;">
+		<input type="text" name="txtRno" placeholder="Roll Number" required />
+		<br /><br />
+		<input type="text" name="txtStdName" placeholder="Student Name " required />
+		<br /><br />
+		<label>Course : </label>
+		<br />
+		<select name="ddlCourse">
+			<option value="Java">Java</option>
+			<option value="Python">Python</option>
+			<option value="Dotnet">Dotnet</option>
+			<option value="MySQL">MySQL</option>
+		</select>
+		<br /><br />
+		<input type="text" name="txtFees" placeholder="Course Fees " required />
+		<br /><br />
+
+		<input type="submit"  value="Add Student" />
+	</p>
+</form>
+</body>
+</html>
