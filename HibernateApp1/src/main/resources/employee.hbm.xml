@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ 	<class name="com.entities.Employee" table="empinfo">  
+    <id name="empno"> <!-- Primary key -->  
+     	<generator class="assigned"></generator>  
+    </id>
+    
+    <property name="ename" column="emp_name"/>  
+    <property name="job" column="designation"/>
+    <property name="sal" column="salary"/>  
+  </class> 
+</hibernate-mapping>

@@ -16,6 +16,30 @@
   	<description></description>
   	<servlet-class>com.servlets.apps.ViewStudents</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SearchStd</servlet-name>
+  	<display-name>SearchStd</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.apps.SearchStd</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteStd</servlet-name>
+  	<display-name>DeleteStd</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.apps.DeleteStd</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateStd</servlet-name>
+  	<display-name>UpdateStd</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.apps.UpdateStd</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ModifyStd</servlet-name>
+  	<display-name>ModifyStd</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.apps.ModifyStd</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>AddStudent</servlet-name>
   	<url-pattern>/AddStudent</url-pattern>
@@ -23,5 +47,21 @@
   <servlet-mapping>
   	<servlet-name>ViewStudents</servlet-name>
   	<url-pattern>/ViewStudents</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchStd</servlet-name>
+  	<url-pattern>/SearchStd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteStd</servlet-name>
+  	<url-pattern>/DeleteStd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateStd</servlet-name>
+  	<url-pattern>/UpdateStd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ModifyStd</servlet-name>
+  	<url-pattern>/ModifyStd</url-pattern>
   </servlet-mapping>
 </web-app>
