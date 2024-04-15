@@ -1,7 +1,6 @@
 package com.entities;
 
 public class Employee {
-
 	private int empno;
 	private String ename;
 	private String job;
@@ -30,7 +29,5 @@ public class Employee {
 	}
 	public void setSal(float sal) {
 		this.sal = sal;
-	}
-	
-	
+	}	
 }

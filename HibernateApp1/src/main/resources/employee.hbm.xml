@@ -12,5 +12,5 @@
     <property name="ename" column="emp_name"/>  
     <property name="job" column="designation"/>
     <property name="sal" column="salary"/>  
-  </class> 
+  </class>
 </hibernate-mapping>
