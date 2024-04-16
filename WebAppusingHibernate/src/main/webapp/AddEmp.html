@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p style="text-align: center;">
+		<a href="AddEmp.html">New Employee</a>
+		&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+		<a href="ViewAllEmps">View All Employees</a>
+		&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+		<a href="Logout">Logout</a>
+	</p>
+	<br />
+	<hr />
+	
+<form method="post" action="AddEmp">
+		<h3 style="width: 100%;text-align: center;">New Employee</h3>
+				<hr />
+		<p style="width: 100%;text-align: center;">
+		
+		<input type="text"  name="txtEname" placeholder="Employee Name" required />
+		<br />
+		<br />
+		<select name="ddlJob" required>
+			<option value="-1">Select Job</option>
+			<option value="HR-Manager">HR-Manager</option>
+			<option value="Developer">Developer</option>
+			<option value="Tester">Tester</option>
+			<option value="Sys Analyst">Sys Analyst</option>
+			<option value="DBA">DBA</option>
+		</select>
+		<br /><br />
+		<input type="text" name="txtSal" placeholder="Salary" required />
+		<br />	<br />
+		<input type="email" name="txtEmail" placeholder="Email" required />
+		<br />	<br />
+		<input type="text" name="txtPswd" placeholder="Password" required />
+		<br />	<br />
+		
+		<input type="submit" value="Click Me" />
+		<input type="reset" value="Reset" />
+		</p>
+	</form>
+</body>
+</html>

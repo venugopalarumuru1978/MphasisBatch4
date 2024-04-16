@@ -42,7 +42,7 @@ public class AddEmp extends HttpServlet {
 		
 		EmpOperations e_oper = new EmpOperations();
 		e_oper.AddEmployee(emp);
-		response.sendRedirect("AddEmployee.html");
+		response.sendRedirect("ViewAllEmps.jsp");
 	}
 
 }

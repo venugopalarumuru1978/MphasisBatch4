@@ -94,4 +94,24 @@ public class EmpOperations {
 			System.out.println("Update : " + e);
 		}
 	}
+	
+	public Employee UserCheck(String uname, String pwd)
+	{
+		List<Employee> emplist = null;
+		Employee emp = null;
+		Session session = sf.openSession();
+		try {
+			TypedQuery qry = session.createQuery("from Employee where email=:email and pswd=:pwd");
+			qry.setParameter("email", uname);
+			qry.setParameter("pwd", pwd);
+			
+			emplist = qry.getResultList();
+			if(!emplist.isEmpty())
+				emp = emplist.get(0);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Search Emp Info : " + e);
+		}
+		return emp;
+	}
 }

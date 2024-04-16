@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>com.servlets.AddEmp</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<display-name>Login</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.Login</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>AddEmp</servlet-name>
   	<url-pattern>/AddEmp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/Login</url-pattern>
   </servlet-mapping>
 </web-app>
