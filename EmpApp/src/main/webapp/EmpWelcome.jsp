@@ -2,8 +2,6 @@
 <%@page import="com.operations.EmpOperations"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="java.util.*" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +10,15 @@
 </head>
 <body>
 <%
-EmpOperations  emp_oper = new EmpOperations(); 
-List<Employee> emplist = emp_oper.ViewAll();
-
+	if(session.getAttribute("eno")!=null)
+	{
+	String ename = (String)session.getAttribute("ename");
+	Integer eno = (Integer)session.getAttribute("eno");
+	EmpOperations  emp_oper = new EmpOperations();
+	Employee e = emp_oper.SearchEmployee(eno);
 %>
-<jsp:include page="Links1.jsp"/>
-<h1>Welcome to Administrator</h1>
+<jsp:include page="Links2.jsp"/>
+<h1>Welcome To : <%=ename %></h1>
 <hr />
 <table width="100%"  border="1">
 <tr>
@@ -28,25 +29,21 @@ List<Employee> emplist = emp_oper.ViewAll();
 	<th>Emp Email</th>
 	<th>Emp Password</th>
 </tr>
-
-<%
-for(Employee e : emplist)
-{
-%>
-	<tr>
+<tr>
 		<td><%=e.getEmpno() %> </td>
 		<td><%=e.getEname() %> </td>
 		<td><%=e.getJob() %> </td>
 		<td><%=e.getSalary() %> </td>
 		<td><%=e.getEmail() %> </td>
 		<td><%=e.getPswd() %> </td>
-	</tr>
+</tr>
+</table>
 <%
 }
+	else
+	{
+		response.sendRedirect("Login.jsp");
+	}
 %>
-
-
-</table>
-
 </body>
 </html>

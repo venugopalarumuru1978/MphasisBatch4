@@ -31,7 +31,7 @@ public class DeleteEmp extends HttpServlet {
 		String empno = request.getParameter("eno");
 		response.setContentType("text/html");
 		EmpOperations empOper = new EmpOperations();
-		if(empOper.DeleteEmployee(Integer.parseInt(empno))>=1)
+		if(empOper.DeleteEmp(Integer.parseInt(empno))>=1)
 			response.sendRedirect("ViewAllEmps");
 		else
 			response.getWriter().print("<h2>Error ! Emp Not Deleted</h2>");

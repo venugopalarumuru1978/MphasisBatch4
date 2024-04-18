@@ -76,6 +76,7 @@ public class EmpOperations {
 			TypedQuery qry = session.createQuery("Delete from Employee where empno=:eno");
 			qry.setParameter("eno", eno);
 			res = qry.executeUpdate();
+			trans.commit();
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("Delete : " + e);
@@ -114,5 +115,23 @@ public class EmpOperations {
 			System.out.println("Search Emp Info : " + e);
 		}
 		return emp;
+	}
+	
+	public int ChangePassword(String npwd, int eno)
+	{
+		Session session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		int res=-1;
+		try {
+			TypedQuery qry = session.createQuery("Update Employee  set pswd=:pwd1 where empno=:eno");
+			qry.setParameter("pwd1", npwd);
+			qry.setParameter("eno", eno);
+			res = qry.executeUpdate();
+			trans.commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Delete : " + e);
+		}
+		return res;
 	}
 }
