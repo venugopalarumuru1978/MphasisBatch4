@@ -3,7 +3,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.beans.Employee;
-import com.beans.StdInfo;
+
 
 public class EmpApp1 {
 
