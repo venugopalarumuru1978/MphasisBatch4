@@ -1,7 +1,14 @@
 package com.beans;
 
-public class Cricket {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="CrkInfos")
+public class Cricket {
+	
+	@Id
 	private int crkid;
 	private String crkname;
 	private int runs;
@@ -24,6 +31,4 @@ public class Cricket {
 	public void setRuns(int runs) {
 		this.runs = runs;
 	}
-	
-	
 }

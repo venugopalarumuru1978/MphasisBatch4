@@ -9,47 +9,55 @@
 						http://www.springframework.org/schema/context/spring-context.xsd 
 						http://www.springframework.org/schema/tx 
 						http://www.springframework.org/schema/tx/spring-tx.xsd"> 
+						
+	<context:annotation-config/>
 	
-	<context:annotation-config/> 
-	<bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" id="transactionManager"> 
-		<property name="sessionFactory" ref="sessionFactory"/> 
-	</bean> 
+	<tx:annotation-driven/>
 
-	<tx:annotation-driven/> 
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="ds"> 
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/> 
 		<property name="url" value="jdbc:mysql://localhost:3306/mphasisdb4?useSSL=false"/> 
 		<property name="username" value="root"/> 
 		<property name="password" value="root"/> 
 	</bean> 
+	
 	<bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" id="sessionFactory"> 
 		<property name="dataSource" ref="ds"/> 
 		<property name="hibernateProperties" > 
 			<props> 
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop> 
-				<prop key="hibernate.show_sql">true</prop> 
-				<prop key="hibernate.format_sql">true</prop> 
+				<prop key="hibernate.show_sql">false</prop> 
+				<prop key="hibernate.format_sql">false</prop> 
 				<prop key="hibernate.hbm2ddl.auto">update</prop> 
 			</props> 
 		</property>
-		        <property name="mappingResources">  
-        <list>  
-        	<value>cricket.hbm.xml</value>  
-        </list>  
-        </property>  
 		<!-- 
+		<property name="mappingResources">  
+        <list>  
+        	<value>cricket.hbm.xml</value>
+        </list>  
+        </property>
+         -->  
+		 
 		<property name="annotatedClasses"> 
 			<list> 
 				<value>com.beans.Cricket</value> 
 			</list> 
 		</property> 
-		 -->
+		
 
-	</bean> 
+	</bean>
+	
 	<bean class="org.springframework.orm.hibernate5.HibernateTemplate" id="hTemplate"> 
 		<property name="sessionFactory" ref="sessionFactory"/> 
+	</bean>
+	
+	<bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" id="transactionManager"> 
+		<property name="sessionFactory" ref="sessionFactory"/> 
 	</bean> 
+	
 	<bean id="crkObj"  class="com.DAO.CricketDAOImpl">
     	<property name="template" ref="hTemplate"/>
     </bean>
+    
 </beans>
