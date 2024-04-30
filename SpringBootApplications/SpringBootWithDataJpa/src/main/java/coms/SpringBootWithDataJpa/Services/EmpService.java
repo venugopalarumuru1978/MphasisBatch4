@@ -11,4 +11,6 @@ public interface EmpService {
 	public Employee SearchEmployee(int eno);
 	public void DelEmployee(int eno);
 	public void UpdateEmployee(Employee emp);
+	
+	public List<Employee>  ShowAllJobRelatedEmps(String job);
 }

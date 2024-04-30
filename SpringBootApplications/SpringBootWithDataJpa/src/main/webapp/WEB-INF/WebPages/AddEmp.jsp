@@ -11,6 +11,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+<hr />
+<p style="text-align: center">
+	<a href="newemp">New Employee</a>
+	&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+	<a href="empall">All Employees</a>
+	&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+	<a href="search">Search Employee</a>
+	&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+	<a href="empjob">Search Employee Based On Job</a>	
+</p>
+<hr />
 <h1 style="text-align: center">Employee Register</h1>
 
 	<frm:form  method="post"  action="empprocess"  modelAttribute="emp">

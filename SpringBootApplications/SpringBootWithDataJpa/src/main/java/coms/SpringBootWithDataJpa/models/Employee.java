@@ -4,9 +4,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name="emptest_info")
+@Getter
+@Setter
 public class Employee {
 	@Id
 	@GeneratedValue
@@ -16,35 +20,4 @@ public class Employee {
 	private String job;
 	private float salary;
 	
-	public int getEmpno() {
-		return empno;
-	}
-	
-	public void setEmpno(int empno) {
-		this.empno = empno;
-	}
-	
-	public String getEname() {
-		return ename;
-	}
-	
-	public void setEname(String ename) {
-		this.ename = ename;
-	}
-	
-	public String getJob() {
-		return job;
-	}
-	
-	public void setJob(String job) {
-		this.job = job;
-	}
-	
-	public float getSalary() {
-		return salary;
-	}
-	
-	public void setSalary(float salary) {
-		this.salary = salary;
-	}
 }

@@ -40,13 +40,22 @@ public class EmpServiceImpl implements EmpService {
 	@Override
 	public void DelEmployee(int eno) {
 		
-		er.deleteById(eno);
-		
+		er.deleteById(eno);	
 	}
 
 	@Override
 	public void UpdateEmployee(Employee emp) {
 		
 		er.saveAndFlush(emp);
+	}
+
+	@Override
+	public List<Employee> ShowAllJobRelatedEmps(String job) {
+		List<Employee>  empjoblist = er.ShowAllEmpsBasedOnJob(job);
+		
+		if(empjoblist.isEmpty())
+			return null;
+		
+		return empjoblist;
 	}
 }
