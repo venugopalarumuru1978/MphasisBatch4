@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table width="100%" border="1">
+	<tr>
+		<th>Emp No</th>
+		<th>Emp Name</th>
+		<th>Job</th>
+		<th>Salary</th>
+		<th>Operations</th>
+	</tr>
+	
+		<tr  th:if="${emplist.empty}">
+		<td colspan="5">
+			<h1>No Employee Info Exist</h1>
+		</td>
+	</tr>
+	
+	<tr th:each="emp:${emplist}">
+		<td>
+			<span th:text="${emp.empno}"></span>
+		</td>
+		<td>
+			<span th:text="${emp.ename}"></span>
+		</td>
+		<td>
+			<span th:text="${emp.job}"></span>
+		</td>
+		<td>
+			<span th:text="${emp.salary}"></span>
+		</td>
+		<td>
+			<a th:href="@{/delemp/{eno}(eno = ${emp.empno})}">Delete</a>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

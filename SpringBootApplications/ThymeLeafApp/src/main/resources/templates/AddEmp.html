@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	table{
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">Add New Employee</h1>
+<form th:action="@{/empprocess}" method="POST"  th:object="${emp}">
+	<table>
+	<tr>
+		<th>
+			<input type="text" th:field="*{ename}"  placeholder="Employee Name" />
+		</th>
+	</tr>
+	<tr>
+		<th>
+			<input type="text" th:field="*{job}"  placeholder="Employee Job" />
+		</th>
+	</tr>
+	<tr>
+		<th>
+			<input type="text" th:field="*{salary}"  placeholder="Employee Salary" />
+		</th>
+	</tr>
+	<tr>
+		<th>
+			<input type="submit" value="Add Employee" />
+		</th>
+	</tr>
+</table>
+</form>
+</body>
+</html>

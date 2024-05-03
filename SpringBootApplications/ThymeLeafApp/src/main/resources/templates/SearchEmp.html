@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	table{
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">Search Employee</h1>
+<form th:action="@{/semp}" method="POST">
+	<table>
+	<tr>
+		<th>
+			<input type="text" name="txtEno" placeholder="Employee Number" />
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="submit" value="Search Employee" />
+		</th>
+	</tr>
+	</table>
+</form>
+
+<table width="100%" border="1">
+	<tr>
+		<th>Emp No</th>
+		<th>Emp Name</th>
+		<th>Job</th>
+		<th>Salary</th>
+		
+	</tr>
+		<tr>
+		<td>
+			<span th:text="${emp.empno}"></span>
+		</td>
+		<td>
+			<span th:text="${emp.ename}"></span>
+		</td>
+		<td>
+			<span th:text="${emp.job}"></span>
+		</td>
+		<td>
+			<span th:text="${emp.salary}"></span>
+		</td>
+	
+	</tr>
+	</table>
+</body>
+</html>
