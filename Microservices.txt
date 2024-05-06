@@ -1,0 +1,69 @@
+Today's Agenda
+--------------
+1. JUnit
+2. Micro Services
+--------------
+Microservices
+
+School Application (Project)
+	Student    =  StudentService
+	Employee   =  EmployeeService
+	Library    =  LibraryService
+
+
+1.  How to communicate b/w one service to another service. 
+2.  Monolithic Applications
+	A project which holds all modules together and converted as one Service(as .war/output file).
+		Here there is an issue called as Performance of the application.
+			we have to manage with Load Balancing. 
+
+For these two reasons, Micro services are used. 
+
+What is a Micro Service?
+It is an indepedent deployment component. 
+
+It is a combination of one or more modules of the projects runs as one service. 
+To Avoid monolithic Limitations like memory and time(Performance) problems we use this design. 
+
+Natures of Microservice:-
+--------------------------
+1.  Every Service  must be implemented using WebService Concept.
+2.  Every Service  must be an independent(One service should not effect another one, like code changes, version upgardes, downtime of servers, ....etc)
+3.  It should be able to communicate with any type of client(Mobile Apps, Web Apps, 3rd Party Apps,..)
+4.  Every service should able to communicate with other micro services. it is also called as Intra Communcation.
+5.  It supports  Dynamic Load Balancing(i.e.  One Service runs in multiple instances) based on request. 
+6.  It should to configure different servers.
+
+There are different components/ servers used in Micro Service:- 
+
+1.  Service Registry & Discovery	-  Eureka Server
+2.  Load Balancing		 	-  Ribbon
+3.  Circuite Breaker			-  Hystrix
+4.  API Gateways			-  Zuul
+5.  Config Server			-  GitHub
+6.  Secure Server			-  OAuth2
+7.  Log and Trace			-  Zipkin + Sleuth
+8.  Message Queues			-  Kafka
+9.  Declarative REst Client		-  Fiegn
+10. Integration Service			-  Camel
+11. Production EndPoint			-  Actutor
+12. Cloud Platform			-  PCF, Docker 
+
+
+SOA :-  Service Oriented Architecture
+
+It is a Design Pattern used to create  communication b/w multiple services, providers and consumers(users). 
+
+there are 3 componenets
+
+1.  Service Registry & Discovery   =  Eureka
+2.  Service Provider  (who provide the service)
+3.  Service Consumer  (who uses the service)
+
+Operations :- 
+
+1.  Publish
+2.  Discover
+3.  Link Details of Provider
+4.  Making Http Request(Query)
+5.  Access Service(Response)
