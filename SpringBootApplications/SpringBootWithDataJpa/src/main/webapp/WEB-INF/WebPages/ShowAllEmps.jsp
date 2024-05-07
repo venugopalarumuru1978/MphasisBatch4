@@ -8,9 +8,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+
 </head>
-<body>
+<body class="bg-info">
+<div class="container-fluid">
 <hr />
+
 <p style="text-align: center">
 	<a href="newemp">New Employee</a>
 	&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -23,7 +29,7 @@
 <hr />
 <h1 style="text-align: center">All Employees Information</h1>
 
-<table width="100%" border="1">
+<table class="table table-success table-striped">
 <tr>
 <th>Emp Number</th>
 <th>Emp Name</th>
@@ -45,6 +51,6 @@
 </tr>
 </c:forEach>
 </table>
-
+</div>
 </body>
 </html>

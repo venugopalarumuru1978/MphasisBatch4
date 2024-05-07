@@ -20,6 +20,12 @@ public class EmpController {
 	@Autowired
 	EmpService es;
 	
+	@GetMapping("/test")
+	public String TestPage(Model m)
+	{
+		return "TestPage";
+	}
+	
 	@GetMapping("/")
 	public String AddEmployees(Model m)
 	{
