@@ -19,6 +19,4 @@ public class Employee {
 		this.ename = ename;
 		System.out.println("setter of ename");
 	}
-	
-	
 }

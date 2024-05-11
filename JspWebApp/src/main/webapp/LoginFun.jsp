@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false" %> 
+
 <jsp:useBean id="logObj"  class="com.entites.Login" scope="session"/>
 
 <jsp:setProperty property="uname" name="logObj" value='<%=request.getParameter("txtName") %>'/>
@@ -14,4 +15,3 @@
 <c:if test="${uname=='venugopal' && pwd=='v@123'}">  
    <jsp:forward page="Welcome.jsp"/>
 </c:if>
-
