@@ -13,11 +13,58 @@
         background-image: url(bgpic.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        margin-top: 75px;
     }
 </style>
 </head>
 <body>
+        <!--Navbar Section-->
+        <nav class="navbar navbar-expand-lg bg-secondary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="HomePage.html">
+                    <img src="Img2.jpg" style="width: 30px;height: 30px;" alt="Icon Not Found" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarContent" aria-controls="navbarContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>            
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color:whitesmoke" aria-current="page" href="HomePage.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:whitesmoke" href="LoginPage.html">Login</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color:whitesmoke" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Students
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="RegPage.html">Registration</a></li>
+                                <li><a class="dropdown-item" href="#">Sports and Games</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Exams Schedule</a></li>
+                            </ul>        
+                        </li>
+                        
+                        <li class="nav-item" >
+                            <a class="nav-link disabled" style="color:whitesmoke" aria-disabled="true" href="SlideShowPage.html">Slideshow</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:whitesmoke">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" >
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+<!--Page Content-->   
+<br />
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4"></div>

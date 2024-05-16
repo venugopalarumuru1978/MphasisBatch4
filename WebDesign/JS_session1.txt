@@ -1,0 +1,117 @@
+Today's Agenda
+---------------
+1. BootStrap Continution
+2. JavaScript
+---------------
+JavaScript :- 
+
+What is a Script?
+	programming with web page is called as Script. 
+
+	As per web, scripting is meant for adding functionality for the web pages. 
+
+There are couple of script languages, 
+
+VBScript(Outdated)  -  it works only in IE Browser. Now No IE Browser. 
+JavaScript
+jQuery		    -  Modified version of JavaScript
+TypeScript	    -  It one more type of Script, developed on the top of JS.
+ECMA Script(ES5/ES6) -  Advanced Features of the JS.
+
+from these script languages, JavaScript is a Browser Independent Script Language. 
+On the top of JS, we got web based front end programming languages. 
+	Angular
+	React JS
+	Node JS
+	Express JS
+	Vue JS
+------------------------------
+What is a JavaScript?
+	it is a loosely typed script language which meant for adding features to the webpages
+			1.  Dynamic Pages
+			2.  Validating Inputs of the web page.
+
+important points
+--------
+1.  It is a loosely typed script language, so that it is not having any type of data types for variable creations explicitly.  Based on value assigned, the type will be decided. 
+	
+JS will have implicit data types
+	number
+	string
+	boolean
+	any
+variable will be declared as follows
+	var / let  <variable name> = <value>;
+	
+	var x = 100;
+	var y = 12.34;
+	var str = "SimpliLearn"
+	var ch = true
+
+2.  Any script code has to be integrated with html web page, so javascript also same.
+	to write js program in html page, we have to use following tag which has to be present
+	either in <head>/<body> tag. 
+
+	<script type="text/javascript">
+		js code
+	</script>
+			or
+	Separate .js files will be created, where we can code it and those files can import into 
+	html pages with following tag. 
+
+	<script  src="script filename" />
+
+3.  JS is a Object based script language, so that it provides pre-defined objects to perform different 	actions.
+	some of the objects
+			document -  it is one of the object which represents currently working 
+					web page. 
+			console  -  it is also one of the object, which represents browser 
+					command prompt. 
+
+	to print something on the browser
+		document.writeln("text"/variable)
+	to print something on the browser console
+		console.log("text"/variable)
+
+
+4.  Every script language is a function based language, so that for every task we have to create a 	user defined function and that can be called whenever it is required. 
+
+	function <fun_name>([arg])
+	{
+		action
+	}
+
+	here we can also impliment local and global variables. 
+
+	
+	
+5.  Event Driven Programming:- 
+	Every GUI based lang provides set of tools to give inputs, to perform other actions also. 
+	As per gui based lang,  every action should call it as an Event. 
+
+	What is a Event? 
+		Action(Event Props) + Task(Method)  
+		An action oriented method which will be executed based on situation. 
+
+		Event 		Props
+		------------------------
+		click		onclick(it will execute whenever button clicked)
+		change 		onchange
+		mousemove	onmousemove
+		doubleclick	ondblclick
+		keypress	onkeypress
+
+	these all event occurs for every tool what we are using in web page(buttons, textboxes, ....)
+
+6. Once we create any tool with "name" prop, we can get/set values from those tool as follows
+		to get value :  formname.toolname.value
+		to set value :  formname.toolname.value = <val>
+--------------------
+OOPS - Object Oriented Programming Structure (object, class, abstraction, encapsulation, inheritance, polymarphisum)
+
+Object oriented prog lang
+	java, C++, 
+Object based prog lang
+	all script lang's(javascript, python)
+
+

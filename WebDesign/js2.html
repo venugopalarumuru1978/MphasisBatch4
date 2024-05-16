@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>JS - User defined function</h1>
+
+    <script type="text/javascript">
+        
+            /*
+                once we declare variable as global, that variable
+                can access in the functions of that page.
+
+                the variable declared within the function/method is 
+                called as local variables, these variables can use 
+                only within that function.
+            */ 
+            // global variable section
+            var p = 150;  // global variable
+       // function definition
+        function demofun1()
+        {
+            console.log("this is function without arg");
+            console.log("Global variable  value : " + p);
+        }
+
+        function  demofun2(x, y)
+        {
+            console.log("X value is : " + x);
+            console.log("Y value is : " + y);
+
+            p = p+100;
+        }
+
+        function demofun3(x)
+        {
+            var sq = x*x;  // sq is a local variable
+            console.log("Present value of the global variable : " + p);
+            return sq;
+        }
+       // function calling
+       demofun1();
+       console.log("-------------");
+       demofun2(100,200);
+
+       console.log("-------------");
+       demofun2("JavaScript","SimpliLearn");
+       console.log("-------------");
+       console.log("10 Square value is " + demofun3(10));
+    </script>
+</body>
+</html>
