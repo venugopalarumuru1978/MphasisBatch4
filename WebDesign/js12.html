@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body onload="loadOptions()">
+    <h1 style="text-align: center;width: 100%;">Html Section - Dropdownlist Dynamically </h1>
+
+    <form name="frm1">
+        <p style="text-align: center;width: 100%;">
+            <select name="ddlDay"></select>
+            <select name="ddlMonth"></select>
+            <select name="ddlYear"></select>
+           <input type="button"  value="Click Me" onclick="getdateInfo()" />
+        </p>
+
+        <h2 id="res" style="text-align: center;width: 100%;color:green"></h2>
+    </form>
+    <script type="text/javascript">
+
+        function loadOptions()
+        {
+            var dt = new Date();
+            console.log(dt);
+            var c_day = dt.getDate();
+            var c_mon = dt.getMonth();
+            var c_year = dt.getFullYear();
+
+            console.log(c_day + "-- " + c_mon + "-- " + c_year);
+
+            var days = "<option value='-1'>Day</option>";
+            for(let i=1;i<=31;i++)
+            {
+                if(c_day==i)
+                    days = days + "<option value='" + i + "' selected>" + i + "</option>";
+                else
+                    days = days + "<option value='" + i + "'>" + i + "</option>";
+            }
+            document.getElementsByName("ddlDay")[0].innerHTML = days;
+
+            var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            var monthoptions = "<option value='-2'>Month</option>";
+
+            for(let i=0;i<months.length;i++)
+            {
+                if(c_mon==i)
+                    monthoptions = monthoptions + "<option value='" + months[i] + "' selected>" + months[i] + "</option>";
+                else
+                    monthoptions = monthoptions + "<option value='" + months[i] + "'>" + months[i] + "</option>";
+            }
+            document.getElementsByName("ddlMonth")[0].innerHTML = monthoptions;
+
+            var yearoptions = "<option value='-3'>Year</option>";
+            for(let i=1980;i<=c_year;i++)
+            {
+                if(c_year==i)
+                    yearoptions = yearoptions + "<option value='" + i + "' selected>" + i + "</option>";
+                else
+                    yearoptions = yearoptions + "<option value='" + i + "'>" + i + "</option>";
+            }
+
+            document.getElementsByName("ddlYear")[0].innerHTML = yearoptions;
+        }
+
+        function getdateInfo()
+        {
+            var day = document.getElementsByName("ddlDay")[0].value;
+            var mths = document.getElementsByName("ddlMonth")[0].value;
+            var year = document.getElementsByName("ddlYear")[0].value;
+
+            var result = day + " - " + mths + " - " + year;
+
+            document.getElementById("res").innerHTML = "Date is : " + result;
+        }
+    </script>
+</body>
+</html>

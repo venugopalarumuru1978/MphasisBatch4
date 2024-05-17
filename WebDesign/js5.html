@@ -7,11 +7,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-    <h1 style="text-align: center;width: 100%;">JS - Textbox and Button</h1>
+    <h1 style="text-align: center;width: 100%;">JS - Textbox and Button with ID prop</h1>
 
     <form name="frm1">
         <p style="text-align: center;width: 100%;">
-            <input type="text"  name="txtName"  placeholder="Ur name" />
+            <input type="text"  id="txtName"  placeholder="Ur name" />
             <input type="button"  value="Click Me" onclick="demofun()" />
         </p>
 
@@ -21,7 +21,7 @@
     <script type="text/javascript">
         function demofun()
         {
-            var str = frm1.txtName.value;
+            var str = document.getElementById("txtName").value;
             if(str!="")
             {
                 console.log("Given Value is : "+ str);

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1 style="text-align: center;width: 100%;">JS - Textbox and Button With Formname</h1>
+
+    <form name="frm1">
+        <p style="text-align: center;width: 100%;">
+            <input type="text"  name="txtVal1"  placeholder="Value - 1" />
+            <br /><br />
+            <input type="text"  name="txtVal2"  placeholder="Value - 2" />
+            <br /><br />
+            <input type="button"  value="Click Me" onclick="Calculate()" />
+        </p>
+
+        <h2 id="res" style="text-align: center;width: 100%;color:green"></h2>
+    </form>
+
+    <script type="text/javascript">
+        function Calculate()
+        {
+            var x = parseFloat(frm1.txtVal1.value);
+            var y = parseFloat(frm1.txtVal2.value);
+
+            var sum = x+y;
+
+            document.getElementById("res").innerHTML = "Addition is " + sum;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+Today's Agenda
+---------------
+JavaScript
+---------------
+How to identify  html elements using JS?
+
+1. Using "name" prop along with "formname" whenever we are using inputs of the page. 
+	i.e. while using textbox, radiobutton, checkbox, ....
+	
+		formname.toolname.value
+
+2. Using "id" prop for all the html tags. 
+	i.e.  whenever a html element identified by "id" prop, then by using 
+		document.getElementById("id")
+	it has following properties
+		innerText  :-  to assign any plain text / result to an element
+		innerHTML  :- it is as same as innerText but it allows html formats also
+		value	   :- it is used to get / set value for input controls if it is identified 
+				by "id" prop.
+3.  Using "tagname"  for the tags
+		document.getElementsByTagName("tag")
+	
+	the above statement identifies all the elements for similar tag and returns an array of values
+
+4.  Using "css class name"  for the tags
+		document.getElementsByClassName("cssclassname")
+	
+	the above statement identifies all the elements for similar tag and returns an array of values
+
+5.  Using "name"  prop for the tags
+		document.getElementsByName("name")
+	
+	the above statement identifies all the elements for similar tag and returns an array of values
+------------------
+Conversion Functions :- 
+	these two functions allows to convert string to numeric format. 
+		parseInt(string) - for Integers
+		parseFloat(string) - for Float values
+------------------------
+Validations :-  
+
+Validations will be done in two ways
+
+1.  using HTML5 pattern property(regular expressions).
+
+	A.  if field value is must, then we can apply simply a property "required" for that field.
+			this prop will check value while submiting page. 
+	
+	B. Data Validation with Regular Expressions. The pattern attribute of the <input> element 		allows you to add basic data validation without resorting to JavaScript. It works by 		matching the input value against a regular expression. A regular expression is a 		formalized string of characters that define a pattern.
+
+		<input type="..."  pattern="regex" />
+
+example patterns
+	[A-Z]  =  only capital alphabets
+	[a-z]  =  only small alphabets
+	[0-9]  =  only digits
+	[A-Za-z] = only alphabets(both types)
+	[A-Za-z0-9] = alphabets with digits(both types)
+
+Note :-  
+	{number} = no of chars
+	+ =  single char
+	* = multiple chars
+
+2.  using JavaScript
+	JS validations can be done using coding for custom validations. 
+		ex:- validating radio buttons, checkboxes, dropdown, etc...
+
+------
+Events discussed
+
+onclick, onchange, onload, onsubmit, 
+------
+

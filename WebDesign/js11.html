@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1 style="text-align: center;width: 100%;">Html Section - Dropdownlist</h1>
+
+    <form name="frm1">
+        <p style="text-align: center;width: 100%;">
+            <label>Location</label>
+            <select  name="ddlLoc" onchange="DemoDropdownList()">
+                <option value="-1">Select City</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Amaravathi">Amaravathi</option>
+                <option value="Kolkatta">Kolkatta</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+        </p>
+
+        <h2 id="res" style="text-align: center;width: 100%;color:green"></h2>
+    </form>
+    <script type="text/javascript">
+      function DemoDropdownList()
+      {
+        var loc = frm1.ddlLoc.value;
+        if(loc!="-1")
+            document.getElementById("res").innerHTML = "Ur City is : " + loc;
+        else
+            alert("Please select city");
+      }
+    </script>
+</body>
+</html>

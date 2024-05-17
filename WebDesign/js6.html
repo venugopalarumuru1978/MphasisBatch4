@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .test
+        {
+            color:green;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Html Section - getElementsByTagName</h1>
+
+    <p class="test">Hello - 1</p>
+    <p name="p1">Hello - 2</p>
+    <p class="test">Hello - 3</p>
+    <p name="p1">Hello - 4</p>
+    <p class="test">Hello - 5</p>
+
+    <input type="button"  value="By Tag Name" onclick="testfun()" />
+    <input type="button"  value="By CSS Class Name" onclick="testfun1()" />
+    <input type="button"  value="By Name" onclick="testfun2()" />
+    <script type="text/javascript">
+       
+       function testfun()
+       {
+        console.log(document.getElementsByTagName("p"));
+        var cnt = document.getElementsByTagName("p").length;
+        console.log(cnt);
+        
+        for(let i=0;i<cnt;i++)
+        {
+            var tg = document.getElementsByTagName("p")[i];
+            tg = tg + "<-->" + document.getElementsByTagName("p")[i].innerHTML;
+            console.log(tg);
+        }
+    }
+       function testfun1()
+       {
+        console.log(document.getElementsByClassName("test"));
+        var cnt = document.getElementsByClassName("test").length;
+        console.log(cnt);
+        for(let i=0;i<cnt;i++)
+        {
+            var tg = document.getElementsByClassName("test")[i];
+            tg = tg + "<-->" + document.getElementsByClassName("test")[i].innerHTML;
+            console.log(tg);
+        }
+
+       }
+
+       function testfun2()
+       {
+        console.log(document.getElementsByName("p1"));
+        var cnt = document.getElementsByName("p1").length;
+        console.log(cnt);
+        
+        for(let i=0;i<cnt;i++)
+        {
+            var tg = document.getElementsByName("p1")[i];
+            tg = tg + "<-->" + document.getElementsByName("p1")[i].innerHTML;
+            console.log(tg);
+        }
+    }
+
+    </script>
+</body>
+</html>

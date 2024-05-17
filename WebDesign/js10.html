@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1 style="text-align: center;width: 100%;">Html Section - Checkbox</h1>
+
+    <form name="frm1">
+        <p style="text-align: center;width: 100%;">
+            <label>Person Name</label>
+            <br />
+            <input type="text"  name="txtPerson"  />
+            <br /><br />
+            <label>Hobbies </label>
+            <br />
+            <input type="checkbox" name="chk1"  value="Reading" /><label>Reading Books</label>
+            <input type="checkbox" name="chk2"  value="Chess" /><label>Playing Chess</label>
+            <input type="checkbox" name="chk3"  value="Gardening" /><label>Gardening</label>
+            <br /><br />
+            <input type="button"  value="Click Me" onclick="DemoChkBox()" />
+        </p>
+
+        <h2 id="res" style="text-align: center;width: 100%;color:green"></h2>
+    </form>
+    <script type="text/javascript">
+       function DemoChkBox()
+       {
+            var pname = document.getElementsByName("txtPerson")[0].value;
+            var result = "";
+            var flag = false;
+            if(pname!="")
+            {
+                result = result + pname + " is having hobbies ";
+                if(frm1.chk1.checked == true){
+                    result = result + frm1.chk1.value + ", ";
+                    flag = true;
+                }
+                if(frm1.chk2.checked == true){
+                    result = result + frm1.chk2.value + ", ";
+                    flag = true;
+                }
+                if(frm1.chk3.checked == true){
+                    result = result + frm1.chk3.value + ", ";
+                    flag = true;
+                }
+
+                if(flag==true)
+                    document.getElementById("res").innerHTML = result;
+                else
+                    alert("Select atleast one hobby");
+            }
+            else
+                alert("Please enter ur name");
+       }
+    </script>
+</body>
+</html>
