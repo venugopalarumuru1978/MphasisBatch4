@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Html Section - JS Arrays</h1>
+    <input type="button"  value="Click me" onclick="demoarray()" />
+
+    <p id="result" style="width:100%"></p>
+
+    <script type="text/javascript">
+
+        var stdinfo = [
+            [1001, "Pavan", "Java", 20000.00],
+            [1002, "Kiran", "Java", 20000.00],
+            [1003, "Mohan", "Java", 20000.00],
+            [1004, "Lava Kumar", "Java", 20000.00],
+            [1005, "Praveen", "Java", 20000.00],
+        ];
+
+
+        console.log(stdinfo);
+        console.log(stdinfo.length);
+
+        for(let i=0;i<stdinfo.length;i++)
+        {
+            console.log(stdinfo[i]);
+            for(let j=0;j<stdinfo[i].length;j++)
+            {
+                console.log(stdinfo[i][j]);
+            }
+        }
+
+        function demoarray()
+        {
+            var tabinfo = "<table width='100%' border='1'>";
+            
+                for(let i=0;i<stdinfo.length;i++)
+                {
+                    tabinfo += "<tr>";
+                    for(let j=0;j<stdinfo[i].length;j++)
+                    {
+                        tabinfo += "<td>" + stdinfo[i][j] + "</td>";
+                    }
+                    tabinfo += "</tr>";
+                }
+            
+            tabinfo += "</table>";
+
+            document.getElementById("result").innerHTML = tabinfo;
+        }
+
+    </script>
+</body>
+</html>

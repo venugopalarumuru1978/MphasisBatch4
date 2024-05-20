@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Html Section - JS Arrays</h1>
+
+    <script type="text/javascript">
+            // initilizing part
+        var arr = new Array(10,20,30,40,50);
+            console.log(arr);
+        for(let i = 0;i<arr.length;i++)
+        {
+            console.log(arr[i]);
+        }
+
+        // ---  dynamic part
+
+        var arr1 = new Array(6);
+        arr1[0] = 100;
+        arr1[1] = 200;
+        arr1[2] = 300;
+        arr1[3] = 400;
+        arr1[4] = 500;
+        arr1[5] = 600;
+
+        console.log(arr1);
+
+        var arr2 = [];
+
+        arr2.push(111);
+        arr2.push(112);
+        arr2.push(113);
+        arr2.push(114);
+        arr2.push(115);
+        arr2.push(116);
+        arr2.push(117);
+        arr2.push(118);
+        arr2.push(119);
+        arr2.push(120);
+
+        console.log(arr2);
+
+        arr2.pop();
+
+        console.log(arr2);
+
+        arr2.splice(5,4);
+        console.log(arr2);
+
+        var stdinfo = [];
+        stdinfo.push(1001);
+        stdinfo.push("Kiran");
+        stdinfo.push("Java");
+        stdinfo.push(12000.00);
+
+        console.log(stdinfo);
+
+    </script>
+</body>
+</html>

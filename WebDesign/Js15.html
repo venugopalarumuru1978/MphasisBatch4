@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Html Section - JS JSON</h1>
+    <input type="button"  value="Click Me" onclick="demofun()" />
+    <p id="result" style="width:100%"></p>
+
+    <script type="text/javascript">
+              // single json object
+        var empinfo = {"eno":1001, "ename":"Jagan", "job":"HR Manager", "sal":40000.00};
+        console.log(empinfo);
+        console.log(empinfo.eno);
+        console.log(empinfo.ename);
+        console.log(empinfo.job);
+        console.log(empinfo.sal);
+             // array of json object
+        var setempinfo = [
+        {"eno":1001, "ename":"Jagan", "job":"HR Manager", "sal":40000.00},
+        {"eno":1002, "ename":"Pavan", "job":"Developer", "sal":20000.00},
+        {"eno":1003, "ename":"Lavan", "job":"Tester", "sal":15000.00},
+        {"eno":1004, "ename":"Raavan", "job":"Developer", "sal":20000.00},
+        {"eno":1005, "ename":"Jagan", "job":"Tester", "sal":15000.00}
+        ];
+
+        function demofun()
+        {
+                var einfo = "<ol type='A'>";
+                       einfo += "<li> Employee Number : " + empinfo.eno + "</li>";
+                       einfo += "<li> Employee Name : " + empinfo.ename + "</li>";
+                       einfo += "<li> Employee Job : " + empinfo.job + "</li>";
+                       einfo += "<li> Employee Salary : " + empinfo.sal + "</li>";
+                einfo += "</ol>";
+
+                einfo += "</ol><br /><hr /><br />";
+
+                einfo += "<table width='100%' border='1'>";
+                einfo += "<tr><th>Empno</th><th>Ename</th><th>Job</th><th>Salary</th></tr>"
+
+                  for(let i=0;i<setempinfo.length;i++)
+                {
+                    einfo += "<tr>";
+                   
+                        einfo += "<td>" + setempinfo[i].eno + "</td>";
+                        einfo += "<td>" + setempinfo[i].ename + "</td>";
+                        einfo += "<td>" + setempinfo[i].job + "</td>";
+                        einfo += "<td>" + setempinfo[i].sal + "</td>";
+                   
+                    einfo += "</tr>";
+                }
+                einfo += "</table>";
+                
+                document.getElementById("result").innerHTML = einfo;   
+        }
+    </script>
+</body>
+</html>
