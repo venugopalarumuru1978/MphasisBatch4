@@ -1,0 +1,20 @@
+<div style="text-align: center;width: 100%;">
+<label>Person Name </label>
+<input type="text" [(ngModel)]="pname" /><br /><br />
+<label>Gender </label>&nbsp;&nbsp;&nbsp;
+<input type="radio"  [(ngModel)]="gender" value="Male" /><label>Male</label>
+<input type="radio"  [(ngModel)]="gender" value="Female" /><label>Female</label>
+<br /><br />
+<input type="checkbox"  [(ngModel)]="isGraduate" />Is the person Graduate?
+<br /><br />
+<label>Location</label>
+<select [(ngModel)]="location">
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Amaravathi">Amaravathi</option>
+</select>
+<br /><br />
+<input type="button"  value="Click Me" (click)="printData()" />
+<hr />
+<div  [innerHTML]="msg" [ngClass]="cssclass"></div>
+</div>

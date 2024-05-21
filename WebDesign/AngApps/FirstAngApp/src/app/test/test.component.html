@@ -1,0 +1,9 @@
+<div class="div1">
+    <h1>Interpolation</h1>
+    <h2>Person Name : {{pname}}</h2>
+    <h2>Age : {{age}} years</h2>
+    <h2>Location : {{location}}</h2>
+    <h3><a [href]="url">Chcek Myprofile</a></h3>
+    <input type="text"  name="txtpname" [value]="pname" />
+    <input type="button"  value="Click Me" (click)="getinfo()" />
+</div>

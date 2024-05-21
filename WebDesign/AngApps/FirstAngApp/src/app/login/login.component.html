@@ -1,0 +1,16 @@
+<h2 style="text-align: center;">Students Information</h2>
+<hr />
+<table width="100%" border="1">
+    <tr>
+        <th>Roll Number</th>
+        <th>Student Name</th>
+        <th>Course</th>
+        <th>Fees</th>
+    </tr>
+    <tr *ngFor="let std of stdinfo">
+        <td>{{std.rollno}}</td>
+        <td>{{std.sname}}</td>
+        <td>{{std.course}}</td>
+        <td>{{std.fees}}</td>
+    </tr>
+</table>

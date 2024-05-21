@@ -1,0 +1,19 @@
+<div>
+    <h2>Two Way Binding</h2>
+    <h2>Person Name : {{pname}}</h2>
+    <hr />
+    <input type="text"  [(ngModel)]="pname" />
+    <br />
+    <h2>Cities</h2>
+    <ol type="1">
+        <li *ngFor="let ct of cities">
+            {{ct}}
+        </li>
+    </ol>
+    <h2>Cities</h2>
+    <table width="20%" border="1">
+        <tr *ngFor="let ct of cities">
+            <td>{{ct}}</td>
+        </tr>
+    </table>
+</div>

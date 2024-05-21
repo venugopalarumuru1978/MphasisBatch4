@@ -1,0 +1,259 @@
+Today's agenda
+---------------
+JavaScript 
+      Arrays
+      JSON
+TypeScript
+---------------
+Array :-  It is one of the data type where it allows to store multiple values. 
+		var <variable_name> = [val1, val2, val3, ....]
+			or
+		var  <variable> = new Array(val1, val2, val3, ...)
+
+arrays provides following two functions
+
+push() :- adding value to the array at the ending position.
+pop() :-  removing value from an array from ending position.
+
+splice(index, no of values) :-  it allows to remove set of value(s) from specific index position.
+----------------------------
+JSON :-  JavaScript Object Notation
+
+It is meant for tranmitting data b/w applications. whenever data is in json format, that can be used in any prog lang. 
+
+var Object = {key:value, key:val, ......}
+-----------------
+TypeScript:- 
+-----------------
+It is a programming language which is developed by using JavaScript. 
+It is a superset of JavaScript and it also consider as Extension to JavaScript. 
+
+On the top of JavaScript,  We have couple of Other Script Languages
+	1. jQuery
+	2. ES6 - ECMA Script
+	3. TypeScript
+
+TypeScript consist of following concepts:- 
+	1. JavaScript
+	2. Data Types
+	3. OOPS Concepts
+	4. Misc Concepts
+		Arrow Functions
+		Multiline Strings
+		String Interpolation
+		Modules
+		Enums
+Advantages:- 
+	1. It will support both script based data type like "var" and typescript based data types. 
+		i.e. we can declare variables with "var/let" keyword
+			or
+		TypeScript provides following data types
+			number 	:-  it is meant for both integer and decimal values
+			string 	:-  It is meant for only strings
+			boolean	:-  It is meant for only two valus like "true/false"
+			any	:-  It is meant for storing any data type value. 
+		with the help of above data types, the variable can be declared as follows
+			var <variable name> :  <data type> = <value>;
+	2. It allows to identify errors. 
+	3. Intellisence	
+------------------------------------
+How to install software :-
+	1.  Download and install Node JS.
+	2.  Install TypeScript with following command from command prompt. 
+		npm install typescript -g
+---------------
+	Node JS :-  It is a software a tool called as NPM(Node Package Manager).
+	NPM :-  It is a library which is having nearly 8lakhs of library files which support for
+		multiple languages like TypeScript, Angular, React JS, ....
+		NPM Provides CLI - Command Line Enviornment - it will provide set of commands. 
+---------------
+Web Based Programming Languages
+	1. Angular(TypeScript)
+	2. React JS
+	3. Node JS
+	4. Express JS
+	5. Vue JS
+
+for these language, base script is "JavaScript".
+-------------------
+What is an NPM?
+	Node Package Manager, It is the world's largest software library used for different web 			programming languages. 
+	
+	It is integrated with Node JS.
+
+	Once we install Node JS, automatically "NPM" will be installed. 
+
+	NPM is a freeware, it consist over 8Lakhs library files. 
+
+	Once npm  is installed, it will provide a command prompt called as "CLI-Command Line Client".
+	By using CLI, we can install software is required with commands. 
+
+	To install Node JS, goto http://nodejs.org
+------------------------
+Steps to write TypeScript?
+	1.  Open any editor(VSCode)
+	2.  Code the program as per the requirement
+	3.  Save the program with .ts extension
+	4.  Compile the program with following command
+		C:\>tsc  "filename.ts"
+		Note :- Once it is compiled successfully, it will generate .js file for an execution.
+	5.  Run the program with following command
+		C:\>node  "filename.js"
+-------------------------
+Object Oriented Programming Structure(OOPS):-
+
+It is a one type of programming methodology where it provides different concepts as follows
+1. Object
+2. Class
+3. Encapsulation
+4. Abstraction
+5. Polymarphisum
+6. Inheritance
+
+the purpose of the OOPS is to provide "Data Security". 
+
+What is an Object?
+It is a thing in the real world which has set of attributes and functionality. 
+
+Ex:- Car is an OBject
+	- Attributes
+		- Model
+		- Color
+		- Number
+		- Seating Capacity
+	- Functionality
+		- Transportation of people
+		- Changing of Gear
+		- Breaks to Stop
+
+What is a Class?
+	It is a blueprint of the object (or)
+	It is an encapsulated cell where it allows to define attributes and functionalities of an 		object.
+		
+	class <classname>
+	{
+		propertyname:datatype=<value>;
+		......
+		......
+	
+		method_name([arguments]):[return type]
+		{
+			body of the method
+		}
+	} 
+
+	Once class is defined, we can create any number of the objects.
+		var objectname = new ClassName([parameters]);
+	
+	we can access class members(variables/methods) with the help of object as follows
+		objectname.variable/method
+
+
+Access Specifiers :-  
+These are the keywords which tells how to access class members inside and outside of the class.	
+
+private :-  it allows to use class members only inside the class. 
+public :-  it allows to use class members inside and outside of the class. 
+protected :-  it allows to use one class members into another specific class. 
+------------------------------
+constructor :- 
+It is a special method of the class which menat for specifing initial action for an object.
+i.e. to initialize  class properties at the time of object creation. 
+
+constructor([parameters])
+{
+	body of the constructor
+}
+
+a. it will execute automatically whenever object is created. 
+b. It can take parameters but it won't return value. 
+-----------------------------------
+Inheritance:- It is the process of getting the features from parent class to child class. 
+
+purpose of this concept is, resuability of the classes. 
+
+Imp Points 
+1.  Here parent item/class is called as Base Class  and Child item/class is called as Derived Class. 
+2.  Inheritnce will be done from parent to child class only. 
+3.  To inherit a class use following syntax
+		class <child class name>  extends <parent class name>
+		{
+			body of the class
+		}
+4.   No need to create an object for parent classes, just create an object for child class then call 	the methods from parent and child classes.
+
+Types of Inheritances :-  
+
+1. Single Inheritance
+2. Multi Level Inheritance
+3. Multiple Inheritance
+4. Hirarchical Inheritance
+5. Hybrid Inheritance
+
+Note :-  As per the Inheritance, a child class can inherit only one parent class. 
+--------------------------
+Interface :-
+It is one type of class where it allows only declaration of the variables and methods. 
+
+Purpose of the interface is to achieve multiple inheritance. So that every interface works like as Parent Class. 
+
+interface <interface name>
+{
+	method declarations
+}
+
+once interface is created, that has to inherit to the class with the help of "implements" keyword. 
+multiple interface can be inherited to the class. 
+
+class <classname> implements <interface name1, name2, ...>
+{
+	....
+}
+
+within that class, the interface methods will be defined.
+---------------------------------------
+As per TypeScript, following OOPS Concept cannot be used
+
+1. Constructor Overloading
+2. Abstract classes and Abstract method
+3. Polymarphisum
+	Method Overload and Method Override
+---------------------------------------
+Modules:-
+
+A module is an typescript class file(s) where it allows to export from one program to another program.
+
+purpose:- to export one class into another class to use within the application. 
+
+to create a class to export, use "export" keyword at the time of class definition. 
+
+export class <class name>
+{
+	body of the class
+}
+
+the classes which is defined to export, that can be imported in some other class as follows
+
+import  {export classname}  from "./export class filename";
+
+class <classname>
+{
+....
+}
+-----
+Enumerations :-
+
+It is a collection of constants grouping under one unit. 
+It acts as a user defined data type.
+
+enum  <name>
+{
+	const-1, const-2, ....
+}
+
+once it is created, it can be assigned into a variable of the class. 
+
+class <classname>
+{
+	variable:enum_name;
+}
