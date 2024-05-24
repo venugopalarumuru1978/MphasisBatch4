@@ -6,11 +6,33 @@
         <th>Student Name</th>
         <th>Course</th>
         <th>Fees</th>
+        <th>Operations</th>
     </tr>
-    <tr *ngFor="let std of stdinfo">
+    <tr *ngFor="let std of stdinfo;let i=index">
         <td>{{std.rollno}}</td>
-        <td>{{std.sname}}</td>
+        <td>{{std.sname}} &nbsp;&nbsp; - &nbsp;&nbsp;{{i}}</td>
         <td>{{std.course}}</td>
         <td>{{std.fees}}</td>
+        <td>
+            <input type="button"  value="Delete" (click)="removeStudent(i)" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="text" [(ngModel)]="std.rollno" />
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="std.sname" />
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="std.course" />
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="std.fees" />
+        </td>
+        <td>
+            <input type="button" value="Add Student" (click)="addnewStudent()" />
+        </td>
     </tr>
 </table>

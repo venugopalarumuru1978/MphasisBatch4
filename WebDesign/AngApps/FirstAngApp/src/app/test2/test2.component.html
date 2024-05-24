@@ -1,19 +1,70 @@
 <div>
     <h2>Two Way Binding</h2>
     <h2>Person Name : {{pname}}</h2>
-    <hr />
-    <input type="text"  [(ngModel)]="pname" />
+   
     <br />
-    <h2>Cities</h2>
-    <ol type="1">
-        <li *ngFor="let ct of cities">
-            {{ct}}
-        </li>
-    </ol>
-    <h2>Cities</h2>
-    <table width="20%" border="1">
-        <tr *ngFor="let ct of cities">
-            <td>{{ct}}</td>
+    <table width="100%" border="1">
+        <tr>
+            <td>
+                <h2>Cities</h2>
+                <ol type="1">
+                    <li *ngFor="let ct of cities">
+                        {{ct}}
+                    </li>
+                </ol>            
+            </td>
+            <td>
+                <h2>Cities</h2>
+                <table width="20%" border="1">
+                    <tr *ngFor="let ct of cities">
+                        <td>{{ct}}</td>
+                    </tr>
+                </table>            
+            </td>
         </tr>
     </table>
+    <hr />
+    <table width="100%" border="1">
+        <td>
+            <h3>Person Name : </h3>
+            <input type="text"  [(ngModel)]="pname" />
+            <h3>Person Age : </h3>
+            <input type="text" [(ngModel)]="age" />
+            <br /><br />
+            <input type="button"  value="Click Me"  (click)="testvoterage()"/>
+            <!--
+            <div [innerHTML]="msg"  *ngIf="flag" [ngClass]="cssclass" ></div>
+            <div [innerHTML]="msg"  *ngIf="!flag" [ngClass]="cssclass" ></div>
+            -->
+            <div *ngIf="flag; then greentemp;else redtemp"></div>
+            
+            <ng-template #greentemp>
+                <div [innerHTML]="msg" [ngClass]="cssclass" ></div>
+            </ng-template>
+            
+            <ng-template #redtemp>
+                <div [innerHTML]="msg" [ngClass]="cssclass" ></div>
+            </ng-template>            
+        </td>
+        <td>
+            <h2>Select Country</h2>
+            <select [(ngModel)]="country">
+                <option value="India">India</option>
+                <option value="Canada">Canada</option>
+                <option value="Austrlia">Austrlia</option>
+                <option value="USA">USA</option>
+                <option value="Srilanka">Srilanka</option>
+            </select>
+            <br /><br />
+            <div [ngSwitch]="country">
+                <div *ngSwitchCase="'India'" ><b class="getgreen">Interested to do job in India</b></div>
+                <div *ngSwitchCase="'USA'" ><b class="getgreen">Interested to do job in USA</b></div>
+                <div *ngSwitchCase="'Srilanka'"><b class="getgreen">Interested to do job in Srilanka</b></div>
+                <div *ngSwitchCase="'Canada'"><b class="getgreen">Interested to do job in Canada</b></div>
+                <div *ngSwitchCase="'Austrlia'"><b class="getgreen">Interested to do job in Austrlia</b></div>
+                <div *ngSwitchDefault><b class="getred">Please select an option</b></div>
+            </div>
+        </td>
+    </table>
+
 </div>

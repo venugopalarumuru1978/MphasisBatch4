@@ -1,0 +1,22 @@
+<div style="text-align: center;width:100%">
+    <h2>Employee Name : {{empname|uppercase}}</h2>
+    <h2>Employee Name : {{empname|lowercase|slice:0:7}}</h2>
+    
+    <h2>Employee Salary in Ruppes : {{salary|currency:"INR"}}</h2>
+    <h2>Employee Salary in Dollors : {{salary|currency:"USD"}}</h2>
+    <h2>Employee Salary in Euroes : {{salary|currency:"EUR"}}</h2>
+    <h2>Employee Salary in British Dollers : {{salary|currency:"GBP"}}</h2>
+
+    <h2>Joinig Date : {{dt}}</h2>
+    <h2>Joinig Date(Long Date) : {{dt|date:"longDate"}}</h2>
+    <h2>Joinig Date(Short Date) : {{dt|date:"shortDate"}}</h2>
+    <h2>Joinig Date(Full Date) : {{dt|date:"fullDate"}}</h2>
+    <h2>Joinig Date(Format) : {{dt|date:"d-M-y"}}</h2>
+    <h2>Joinig Time(Format) : {{dt|date:"h:m:s"}}</h2>
+    <h2>Emp Address : {{empaddress|json}}</h2>
+    <h2>Employee Hike Salary : {{cent|percent}}</h2>
+
+    <h2>Bonus : {{n|number}}</h2>
+
+
+</div>

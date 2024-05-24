@@ -1,0 +1,63 @@
+<br />
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-9">
+                        <b>Register Page - Reactive Driven Form(FormGroup)</b>
+                    </div>
+                    <div class="col-md-3">
+                        <a routerLink="/login">Login</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="card-body">
+                <form [formGroup]="regForm" (ngSubmit)=" registerPerson()">
+                    <label>Person Name</label>
+                    <input type="text" formControlName="personName"  class="form-control" name="pname" />
+                    <span class="error"  *ngIf="regForm.controls.personName.touched && regForm.controls.personName.invalid">
+                        Person Name must be entered & Atleast 5 chars name.
+                    </span> 
+                    <hr />
+                    <label>Gender</label>
+                    <br />
+                    <input type="radio"  name="gender"  formControlName="gender" value="Male" />                    
+                    <label>Male</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio"  name="gender"  formControlName="gender" value="Female" />
+                    <label>Female</label><br />
+                    <span class="error"  *ngIf="regForm.controls.gender.touched && regForm.controls.gender.invalid">
+                        Gender must be selected.
+                    </span> 
+                    <br />
+                    <hr />
+                    <label>Location</label>
+                    <select formControlName="location" class="form-select">
+                        <option value="-1">Select Loc</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Banagalore">Banagalore</option>
+                        <option value="Amaravathi">Amaravathi</option>
+                    </select>
+                    <span class="error"  *ngIf="regForm.controls.location.touched && regForm.controls.location.invalid">
+                        Location must be Selected.
+                    </span> 
+                    <hr />
+                    <label>Phone Number</label>
+                    <input type="text" formControlName="phonenumber"  class="form-control" />
+                    <span class="error"  *ngIf="regForm.controls.phonenumber.touched && regForm.controls.phonenumber.invalid">
+                        Phone Number must be entered and it should be 10 digits
+                    </span>
+                    <br />
+                    <input type="submit" value="Register here" class="btn btn-success" />
+                </form>
+                
+                <div [innerHTML]="msg" ></div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

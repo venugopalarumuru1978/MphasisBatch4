@@ -1,0 +1,44 @@
+<br /><br /><br />
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <b>Login Here - Template Driven Form</b>
+            </div>
+            <div class="card-body">
+            <form #frmLogin="ngForm" (ngSubmit)="usercheck(frmLogin)">
+                <label>Username</label>
+                <input type="text"  [(ngModel)]="username" class="form-control"
+                name="username" #user="ngModel" required />
+                <span class="error" *ngIf="user.touched && user.invalid">
+                    Please provide username
+                </span>
+                <br />
+                <label>Password</label>
+                <input type="password"  [(ngModel)]="pwd" class="form-control" 
+                name="pswd" #pass="ngModel"  required />
+                <span class="error"  *ngIf="pass.touched && pass.invalid">
+                    Password must be provided
+                </span>
+
+                <br /><br />
+                <input type="submit"  value="Login Here"  class="btn btn-success" />
+                <br />
+                <div [innerHTML]="msg" class="error"></div>
+            </form>
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <b>If u r new user : <a routerLink="/reg1">Register(Type-1)</a></b>
+                </div>
+                <div class="col-md-6">
+                    <b>If u r new user : <a routerLink="/reg2">Register Here(Type-2)</a></b>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
