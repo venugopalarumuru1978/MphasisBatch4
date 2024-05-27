@@ -5,14 +5,21 @@ import { PipesPageComponent } from './pipes-page/pipes-page.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { Register1Component } from './register1/register1.component';
 import { Register2Component } from './register2/register2.component';
+import { HomeComponent } from './home/home.component';
+import { loginGuard } from './login.guard';
+import { ViewAllEmpsComponent } from './view-all-emps/view-all-emps.component';
+import { EmpallComponent } from './empall/empall.component';
 
 const routes: Routes = [
-  {path:"", component:LoginComponent},
+  {path:"", component:HomeComponent},
   {path:"login", component:LoginComponent},
+  {path:"home", component:HomeComponent},
   {path:"pips", component:PipesPageComponent},
-  {path:"welcome", component:WelcomeComponent},
+  {path:"welcome", component:WelcomeComponent, canActivate:[loginGuard]},
   {path:"reg1", component:Register1Component},
   {path:"reg2", component:Register2Component},
+  {path:"allempinfo", component:ViewAllEmpsComponent,canActivate:[loginGuard]},
+  {path:"allemp", component:EmpallComponent,canActivate:[loginGuard]},
 ];
 
 @NgModule({

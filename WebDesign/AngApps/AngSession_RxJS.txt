@@ -1,0 +1,122 @@
+Today's Agenda:-
+-----------------
+JSON Server
+HttpClient
+RxJs(Observables)
+-----------------
+JSON Server :-  
+JavaScript Object Notation
+
+JSON formatted Data:- 
+
+Employee :-
+
+EmpID   EmpName    Job       Salary
+--------------------------------
+1001    Rakesh     Manager   10000
+-------------------------------
+
+{
+"key": value,
+"key": value,
+.......
+}
+
+"employee":[ 
+{
+"empid":1001,
+"empname" :"venugopal",
+"job" :  "Manager", 
+"salary":12000
+},
+{
+"empid":1002,
+"empname" :"Pavan",
+"job" :  "developer", 
+"salary":10000
+}
+]
+
+this formated data will be placed in an file having an extension "json".
+	employee.json
+
+
+Steps to install json server
+
+1. use following command to install at command prompt
+		npm install -g json-server
+2.  create db.json file to store data in json format
+{
+"employee":[ 
+{
+"empid":1001,
+"empname" :"venugopal",
+"job" :  "Manager", 
+"salary":12000
+},
+{
+"empid":1002,
+"empname" :"Pavan",
+"job" :  "developer", 
+"salary":10000
+}], 
+"Student":[
+{
+	"rollno":101,
+	"sname":"murali"
+},
+{
+	"rollno":102,
+	"sname":"kamal"
+}]
+
+}
+3. to access data from db.json file, we have to start server by using following command
+	json-server db.json
+
+4.  Once server is started, that can be accessed with following url on browser
+		http://localhost:3000/
+
+
+To test any server operations like Add/View/Modify/Delete, we have to use a tool called as POSTMAN
+It can be used for testing any kind of Services, like JSON/RESTAPI/Microservices/Web Services...
+
+There are 4 types of requests 
+
+1.  GET  :-  to view all the data
+2.  GET/id :- to videw particular peace of info
+3.  POST :-  to add data
+4.  PUT :-  to modify data
+5.  DELETE :-  to delete data
+--------------------------------------------------
+RxJS stands for *R*eactive E*x*tensions for *J*ava*S*cript, 
+
+it’s a library that gives us an implementation of Observables for JavaScript.
+RxJS, is a reactive library used to implement reactive programming to deal with async implementation, callbacks, and event-based programs.
+
+Observable :- It is a data source(events, http request, custom data source..) which sends data in the form of data packets to the observer.
+
+Observer :-  It is an object that subscribes to the observable and listens to the data packets that sends by observable.
+
+these two classes comes under RxJS Module.
+--------------------
+What is a Subscription?  
+Normally Subscription means an arrangement to receive something.   
+
+Similarly, in Angular applications Observables will be connected to observers and whenever they observe a new value or change in data, they will execute code with the help of Subscription and all the subscribed components will receive the updated outcome. 
+
+There is a method to this action "subscribe()".
+--------------------------------------------------
+HttpClient :-  This class is used to send request and get responses with the help of any API's.
+
+getmapping  = get()
+postmapping = post()
+putmapping = put()
+deletemapping = delete()
+-------------
+Steps 
+
+1. Create an app
+2. Create components for the pages
+3. Create service and then define methods to commnuniate with json-server for all http request.
+4. Now using service methods, apply function in every component as per the requirement.

@@ -10,7 +10,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { Register1Component } from './register1/register1.component';
 import { Register2Component } from './register2/register2.component';
 import {ReactiveFormsModule } from '@angular/forms';
-
+import { HomeComponent } from './home/home.component';
+import { ViewAllEmpsComponent } from './view-all-emps/view-all-emps.component';
+import { EmpallComponent } from './empall/empall.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,14 +21,18 @@ import {ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     WelcomeComponent,
     Register1Component,
-    Register2Component
+    Register2Component,
+    HomeComponent,
+    ViewAllEmpsComponent,
+    EmpallComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule, 
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

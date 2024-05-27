@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
 @Component({
@@ -12,17 +12,22 @@ export class LoginComponent {
   pwd:string = "";
   msg:string = "";
 
-  constructor(private router:Router, private loginService:LoginService){}
+  constructor(private router:Router, private loginService:LoginService){
+      sessionStorage.removeItem("uinfo");
+  }
 
-
+  
   usercheck(frm:any):void
   {
-    
     if(frm.valid)
     {
-      if(this.username =="Venugopal" && this.pwd == "v@123")
+      //if(this.username =="Venugopal" && this.pwd == "v@123")
+      if(this.loginService.LoginUserCheck(this.username, this.pwd)==true)
+      {
+        sessionStorage.setItem("uinfo", this.username);
         //this.msg = "user details are correct";
         this.router.navigate(['/welcome']);
+      }
       else
         this.msg = "invalid user details";
     }

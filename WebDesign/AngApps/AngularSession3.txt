@@ -1,0 +1,143 @@
+Today's Agenda
+--------------
+1. Pipes
+2. Services
+3. Navbar Hide and Show
+4. Json Server
+5. Guards
+--------------
+Pipes :- these are used to transform the value presentation on html page. 
+		{{variable|pipename}}
+lowercase
+uppercase
+currency
+{{emp.salary|currency:"INR"}}  = indian 
+{{emp.salary|currency:"USD"}}  = US dollor
+{{emp.salary|currency:"EUR"}}  = Euros
+{{emp.salary|currency:"GBP"}}  = Briton Dollor
+date
+{{dinfo|date:"longDate"}}
+{{dinfo|date:"shortDate"}}
+{{dinfo|date:"fullDate"}}
+{{dinfo|date:"d-M-y"}}
+{{dinfo|date:"h:m:s"}} - time
+json
+percent   (0.1 to 1.0)    0.1 = 10%   1 - 100%
+slice
+number
+----------------
+Services:- 
+
+It is a class contains re-usable code(business logic, validations, etc...).
+the purpose of the service is to implement some actions in multiple components.
+To create a service, 
+
+	ng g service  <service name>
+
+	once service is created and defined with required functionality, that service can be used in any component. To use service in component, declare service class object as contructor parameter
+
+	constructor(private  serviceObj:ServiceClassname)
+	{
+
+	}
+
+Web Storage API :-  this objects are used to store data within the application in clientside. 
+localStorage		:-  it will store data in application memory, it is avaiable untile close the 				application.
+sessionStorage 		:-  it will store data in session memory of the browser, once browser is 				closed, data will be deleted. 
+----------
+Project
+	there are 3 modules
+		Every Module having their own navigations
+			Mod-1 :    Home    Login   Contact   About
+			Mod-2 :    EmpHome EmpInfo ChangePwd  Logout(When Emp Logins)
+			Mod-3 :    AdminHome  NewEmp   ShowAllEmps  Logout(When Admin Logins)   
+
+these all 3 menus has to be defined in app.component.html
+but when home page is executed, only Menu 1 should visiable and Menu 2 and Menu 3 should not. 
+
+when Admin Logins, Only Menu 2 has to visiable remaining should not
+
+when User Logins, Only Menu 3 has to visiable remaining should not
+
+DoCheck Interface :- Whenever we inplement this interface, it provides a method, that method will be executed every time whenever we navigate from one page to another page.
+----------
+Guards :- 
+A Gurad is service that executes  at the specified situation while angular is navigating from one page to another page. 
+
+Here there are different  Guard Methods
+1. CanActivate		:-  Executes before entering into a route/page.
+2. CanDeactivate	:-  Executes before leaving the page.
+Once guard is created, it has to return a boolean value either "true/false".
+
+there two ways to create guards
+
+1.  Functional Guard
+2.  Class Guard
+
+How to create a guard?
+	ng g guard  <guardname>  (it create functional guard)
+	ng g guard  <guardname> --functional=false  --skip=test (it is for older version, 14, 11, ..)
+
+-------------------
+JSON -Server
+https://medium.com/@devmrin/create-a-rest-api-json-server-in-less-than-1-minute-acf286600f03
+
+db.json file
+
+{
+"tablename" : [
+	{
+		"id":value,
+		"colname":value, 
+		.......
+	},
+	{
+		"id":value,
+		"colname":value, 
+		.......
+	}
+	............
+],
+"tablename": [
+	{
+		"id":value,
+		"colname":value, 
+		.......
+	},
+	{
+		"id":value,
+		"colname":value, 
+		.......
+	}
+	............
+],
+......
+}
+
+To Start Server use following command:
+	C:>json-server  db.json
+To view info, goto web browser once server started successfully, then use following url
+	http://localhost:3000/
+To Start with Specific Port No
+	json-server --watch db.json --port 8000
+
+Perform CURD Operations on any json data.
+-----------------
+AJAX :- Async  JavaScript and Xml
+
+
+
+-----
+What is RxJS?
+Reactive Extension for Javascript
+it is defined as a library for composing asynchronous and event-based programs by using observable sequences. 
+
+It provides one core type, the Observable, satellite types (Observer, Schedulers) and to allow handling asynchronous events as collections.
+
+Observable  and Observer:- 
+
+Observable is a data source(User Events, Http requests, ...) which emits data packets to the observer. 
+
+Observer :- it is an object which subscribes to the observable and listens the actions of Observable of the data packets. 
+
+Subscribe() :-  with the help of this method only http request communication will be done with Observer.

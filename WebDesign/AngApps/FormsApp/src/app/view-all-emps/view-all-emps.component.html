@@ -1,0 +1,36 @@
+<br />
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-9">
+                        <b>Register Page - Reactive Driven Form(FormBuilder)</b>
+                    </div>
+                    <div class="col-md-3">
+                        <a routerLink="/login">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table width="100%" border="1">
+                    <tr>
+                        <th>Emp No</th>
+                        <th>Emp Name</th>
+                        <th>Emp Job</th>
+                        <th>Emp Salary</th>
+                    </tr>
+                    <tr *ngFor="let emp of empInfo">
+                        <td>{{emp.id}}</td>
+                        <td>{{emp.ename}}</td>
+                        <td>{{emp.job}}</td>
+                        <td>{{emp.salary}}</td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
