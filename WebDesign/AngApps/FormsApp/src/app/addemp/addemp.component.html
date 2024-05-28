@@ -1,0 +1,36 @@
+<br />
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-9">
+                        <b>All Employees Information</b>
+                    </div>
+                    <div class="col-md-3">
+                
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <form #frmReg="ngForm" (ngSubmit)="AddnewEmployee()">
+                    <label>Employee ID</label>
+                    <input type="text"  [(ngModel)]="empObj.id" class="form-control" name="empid" />
+                    <br />
+                    <label>Employee Name</label>
+                    <input type="text"  [(ngModel)]="empObj.ename" class="form-control" name="empname" />
+                    <br />
+                    <label>Employee Job</label>
+                    <input type="text"  [(ngModel)]="empObj.job" class="form-control" name="empjob" />
+                    <br />
+                    <label>Employee Salary</label>
+                    <input type="text"  [(ngModel)]="empObj.salary" class="form-control" name="empsal" />
+                    <br />
+                    <input type="submit"  class="btn btn-success" value="Add Employee" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

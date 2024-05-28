@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { loginGuard } from './login.guard';
 import { ViewAllEmpsComponent } from './view-all-emps/view-all-emps.component';
 import { EmpallComponent } from './empall/empall.component';
+import { AddempComponent } from './addemp/addemp.component';
 
 const routes: Routes = [
   {path:"", component:HomeComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:"reg2", component:Register2Component},
   {path:"allempinfo", component:ViewAllEmpsComponent,canActivate:[loginGuard]},
   {path:"allemp", component:EmpallComponent,canActivate:[loginGuard]},
+  {path:"empreg", component:AddempComponent,canActivate:[loginGuard]},
 ];
 
 @NgModule({

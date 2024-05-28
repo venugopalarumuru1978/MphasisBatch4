@@ -18,7 +18,7 @@ export class AppComponent implements DoCheck {
     console.log(this.router.url);
 
     // if(url=="/welcome" || url=="/empnew"  || url=="/viewemps")
-    if(url=="/welcome" || url=="/allemp")
+    if(url=="/welcome" || url=="/allempinfo" ||  url=="/empreg")
     {
       this.homeNav = false;
       this.userNav = true;

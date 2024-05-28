@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewAllEmpsComponent } from './view-all-emps/view-all-emps.component';
 import { EmpallComponent } from './empall/empall.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddempComponent } from './addemp/addemp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     Register2Component,
     HomeComponent,
     ViewAllEmpsComponent,
-    EmpallComponent
+    EmpallComponent,
+    AddempComponent
   ],
   imports: [
     BrowserModule,

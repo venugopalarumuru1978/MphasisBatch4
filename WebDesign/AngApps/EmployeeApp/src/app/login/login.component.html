@@ -1,0 +1,39 @@
+<br /><br /><br />
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><b>Login Here</b></p>
+                    </div>
+                    <div class="col-md-6" style="text-align: right;">
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <form #loginFrm="ngForm" (ngSubmit)="LoginCheck()">
+                <label>Username</label>
+                <input type="text"  [(ngModel)]="username" name="username" class="form-control"
+                #user="ngModel" required />
+                <span class="error" *ngIf="user.touched && user.invalid">
+                    Please provide username
+                </span>
+                <br />
+                <label>Password</label>
+                <input type="password"  [(ngModel)]="pswd" name = "pwd" class="form-control"
+                #pass="ngModel" required />
+                <span class="error"  *ngIf="pass.touched && pass.invalid">
+                    Password must be provided
+                </span>
+                
+                <br />
+                <input type="submit"  value="Login" class="btn btn-success" />
+            </form>
+            <div style="color:red;font-weight: bold;" [innerHTML]="msg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

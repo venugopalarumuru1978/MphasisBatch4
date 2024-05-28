@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h3>Welcome to : {{username}}</h3>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>All Employees Informatsion</p>
+                    </div>
+                    <div class="col-md-6" style="text-align: right;">
+                        <a routerLink="/empadd">New Employee</a>
+                        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        <a routerLink="/login">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <tr>
+                    <th>Emp ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email ID</th>
+                    <th>Operations</th>
+                </tr>
+                <tr *ngFor="let emp of empinfo">
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.firstName|uppercase}}</td>
+                    <td>{{emp.lastName|uppercase}}</td>
+                    <td>{{emp.emailId}}</td>
+                    <td>
+                        
+                        <input type="button"  value="View Emp"  class="btn btn-info" (click)="GetEmpOne(emp.id)"  />
+                        &nbsp;&nbsp;
+                        <input type="button"  value="Modify Emp"  class="btn btn-success" (click)="GetUpdateOne(emp.id)"  />
+                        &nbsp;&nbsp;
+                        <input type="button"  value="Delete Emp"  class="btn btn-danger"  (click)="DelEmp(emp.id)"  />
+                        
+                    </td>
+                </tr>
+              </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>

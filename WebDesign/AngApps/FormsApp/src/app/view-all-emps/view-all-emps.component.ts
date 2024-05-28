@@ -18,7 +18,7 @@ export class ViewAllEmpsComponent {
   getempInfo()
   {
     this.empServ.getAllEmps().subscribe(data=>{
-      alert(data);
+      //alert(data);
         this.empInfo = data;
         console.log(this.empInfo);
     });

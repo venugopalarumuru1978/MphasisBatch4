@@ -18,7 +18,10 @@ export class EmployeeService {
       return this.httpClient.get<Employee[]>(`${this.apiUrl}`);
   }
 
-
+  newEmployee(emp:Employee):Observable<Employee>
+  {
+    return this.httpClient.post<Employee>(`${this.apiUrl}`,emp);
+  }
   
 
 

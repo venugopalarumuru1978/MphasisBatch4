@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <h3>Welcome to : {{username}}</h3>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>New Employee</p>
+                    </div>
+                    <div class="col-md-6" style="text-align: right;">
+                        <a routerLink="/viewall">All Employees</a>
+                        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        <a routerLink="/login">Logout</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <form #regEmp="ngForm" (ngSubmit)="AddNewEmp()">
+                <label>Emp ID </label>
+                <input type="text"  [(ngModel)]="empObj.id" name= "empid" class="form-control" />
+                <label>Employee First Name </label>
+                <input type="text"  [(ngModel)]="empObj.firstName" name="firstName" class="form-control" />
+                <label>Employee Last Name</label>
+                <input type="text"  [(ngModel)]="empObj.lastName" name = "lastName" class="form-control" />
+                <label>Email</label>
+                <input type="email"  [(ngModel)]="empObj.emailId" name = "empEmail" class="form-control" />
+                <br />
+                <input type="submit"  value="Save Employee" class="btn btn-success" />
+            </form>
+            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
