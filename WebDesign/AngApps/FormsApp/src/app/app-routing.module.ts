@@ -10,6 +10,8 @@ import { loginGuard } from './login.guard';
 import { ViewAllEmpsComponent } from './view-all-emps/view-all-emps.component';
 import { EmpallComponent } from './empall/empall.component';
 import { AddempComponent } from './addemp/addemp.component';
+import { ViewempComponent } from './viewemp/viewemp.component';
+import { ModempComponent } from './modemp/modemp.component';
 
 const routes: Routes = [
   {path:"", component:HomeComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path:"allempinfo", component:ViewAllEmpsComponent,canActivate:[loginGuard]},
   {path:"allemp", component:EmpallComponent,canActivate:[loginGuard]},
   {path:"empreg", component:AddempComponent,canActivate:[loginGuard]},
+  {path:"oneemp/:id", component:ViewempComponent,canActivate:[loginGuard]},
+  {path:"modemp/:id", component:ModempComponent,canActivate:[loginGuard]},
 ];
 
 @NgModule({

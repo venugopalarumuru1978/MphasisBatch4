@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 import { Employee } from '../employee';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-all-emps',
@@ -9,7 +10,7 @@ import { Employee } from '../employee';
 })
 export class ViewAllEmpsComponent {
 
-  constructor(private empServ:EmployeeService){
+  constructor(private empServ:EmployeeService, private router:Router){
     this.getempInfo();
   }
 
@@ -22,6 +23,10 @@ export class ViewAllEmpsComponent {
         this.empInfo = data;
         console.log(this.empInfo);
     });
-    
+  }
+
+  getOneEmp(eno:any):void
+  {
+      this.router.navigate(['/oneemp', eno]);
   }
 }

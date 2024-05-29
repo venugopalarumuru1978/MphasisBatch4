@@ -6,7 +6,7 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col-md-9">
-                        <b>All Employees Information</b>
+                        <b>Employee Information</b>
                     </div>
                     <div class="col-md-3">
                 
@@ -20,16 +20,21 @@
                         <th>Emp Name</th>
                         <th>Emp Job</th>
                         <th>Emp Salary</th>
-                        <th>Operation</th>
                     </tr>
-                    
-                    <tr *ngFor="let emp of empInfo">
+                    <tr>
                         <td>{{emp.id}}</td>
                         <td>{{emp.ename}}</td>
                         <td>{{emp.job}}</td>
                         <td>{{emp.salary}}</td>
-                        <td>
-                            <input type="button"  value="View Details"  class="btn btn-secondary"  (click)="getOneEmp(emp.id)" />
+                    </tr>
+                    <br />
+                    <tr>
+                        <td colspan="4">
+                            <a routerLink="/allempinfo" class="btn btn-primary btn-sm">Emp List</a>
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="button" class="btn btn-danger btn-sm"  value="Delete" (click)="deleteEmp(emp.id)" />
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="button" class="btn btn-success btn-sm"  value="Modify" (click)="getModEmp(emp.id)" />
                         </td>
                     </tr>
                 </table>

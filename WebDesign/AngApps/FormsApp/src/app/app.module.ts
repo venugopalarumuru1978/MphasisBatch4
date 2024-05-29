@@ -15,6 +15,8 @@ import { ViewAllEmpsComponent } from './view-all-emps/view-all-emps.component';
 import { EmpallComponent } from './empall/empall.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddempComponent } from './addemp/addemp.component';
+import { ViewempComponent } from './viewemp/viewemp.component';
+import { ModempComponent } from './modemp/modemp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { AddempComponent } from './addemp/addemp.component';
     HomeComponent,
     ViewAllEmpsComponent,
     EmpallComponent,
-    AddempComponent
+    AddempComponent,
+    ViewempComponent,
+    ModempComponent
   ],
   imports: [
     BrowserModule,

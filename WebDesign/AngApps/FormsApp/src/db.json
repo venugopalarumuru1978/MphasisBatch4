@@ -8,9 +8,9 @@
     },
     {
       "id": "3",
-      "ename": "Kamal",
+      "ename": "Kamal Kumar",
       "job": "HR-Manager",
-      "salary": 40000
+      "salary": "50000"
     },
     {
       "id": "4",
@@ -19,14 +19,8 @@
       "salary": 50000
     },
     {
-      "id": "5",
-      "ename": "Devi",
-      "job": "Manager",
-      "salary": 50000
-    },
-    {
       "id": "9",
-      "ename": "Mahesh Kumar",
+      "ename": "Mahesh Naidu",
       "job": "Manager",
       "salary": "25000.00"
     },
@@ -41,6 +35,12 @@
       "ename": "Ramesh Kumar",
       "job": "Developer",
       "salary": "20000.00"
+    },
+    {
+      "id": "1234",
+      "ename": "Venkateswarlu",
+      "job": "HR-Manager",
+      "salary": "50000"
     }
   ]
 }

@@ -1,0 +1,10 @@
+Today's Agenda
+---------------
+Project Explanations
+---------------
+1. Online Test Application
+2. Kitchen Story
+3. Taxi-Booking Service
+4. Insurance Service
+5. Event Management App
+----------------
