@@ -1,0 +1,151 @@
+Phase 5 - Content  (Testing)
+------------------
+Selenium
+Test NG
+AWS
+DevOps
+------------------
+Today's Agenda
+------------------
+Selenium
+------------------
+
+Application Creation goes in 3 steps
+-------
+1. Development
+2. Testing
+3. Deployment
+----------
+What is a Testing?
+
+It is the process of evaluting an application as per the client requiments. 
+As per the testing, there are two types of testings
+1. Manual Testing
+2. Automation (Testing Tools)
+----
+1. Manual Testing
+	Here  no software is used to test the application, by using some rules related to testing by
+	a test engg.  test the application manually and generates reports(Bug Report) in excel format 		and that will be submitted to the development team.
+
+	here lot's communication will be established related to application between development team 		and testing team, it goes until testing team confirms that there is no bugs in the 		application.
+
+2. Testing Tools
+	Here  there exist some collection of automated tools, with the help of these tools
+	testing process will be completed very quickly and efficiently.
+	the tools are like
+		WinRunner
+		LoadRunner
+		QTP (Quick Testing Process)
+		Selenium
+		TestNG
+
+What is Selenium?
+	Selenium is one of the Automated Tool where it allows test the web applications.	
+		or
+	It is an Open Source tool used for automating the web applications. 
+ 
+	When it comes to realtime seniories, Selenium always has to integrate with Junit/TestNG. 
+	Selenium coding can be written in multiple languages
+			Selenium - Java
+			Selenium - C#.Net
+			Selenium - Python
+Software Requirements:- 	
+	1. Java Compiler
+	2. Any IDE /(Eclipse/NetBeans/Intellij/....)
+	3. Apache Tomcat for the web application(Web Server)
+	4. Any Browser(Chrome/Edge/Firfox/.....)
+	5. Selenium
+
+Selenium comes with collection of tools called as "Selenium Suite"
+	1. Selenium IDE	:-  It is tool where we can write selenium programs, but ususally we will avoid this tool, because based on the lang, that related tools directly can use. 
+
+Selenium IDE is implemented as Firefox extension which provides record and playback functionality on test scripts. It allows testers to export recorded scripts in many languages like HTML, Java, Ruby, RSpec, Python, C#, JUnit and TestNG. You can use these exported script in Selenium RC or Webdriver.
+
+>Selenium IDE has limited scope and the generated test scripts are not very robust and portable.
+
+
+		Ex:  Java -  Eclipse/IntelliJ can use for both develop and testing.		
+	2. Selenium RC(Remote Control)
+		This is used to execute test cases on server side.
+	3. Selenium Web Driver
+		This tool is newly introducded tool for the replacement of RC.
+			This will help us to test code either in locally / server side.
+
+		Selenium WebDriver (Selenium 2) is the successor to Selenium RC and is by far the most important component of Selenium Suite. SeleniumWebDriverprovides a programming interface to create and execute test cases. Test scripts are written in order to identify web elements on web pages and then desired actions are performed on those elements.
+
+Selenium WebDriver performs much faster as compared to Selenium RC because it makes direct calls to the web browsers. RC on the other hand needs an RC server to interact with the web browser.
+
+Since, WebDriver directly calls the methods of different browsers hence we have separate driver for each browser. Some of the most widely used web drivers include:
+
+Mozilla Firefox Driver (Gecko Driver)
+Google Chrome Driver
+Internet Explorer Driver
+Opera Driver
+Safari Driver
+HTML Unit Driver (a special headless driver)
+
+	4. Selenium Grid
+			This tool help us  to execute multiple test cases parellely.
+https://www.selenium.dev/downloads/
+	from above url, download "Selenium Server (Grid)"  jar file then place it in a separate folder.
+
+Steps to Create Selenium App:-
+------------------------- 
+
+1.  Open Eclipse then create a simple java application using Maven. 
+2.  Add dependency in POM XML to that application
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.21.0</version>
+</dependency>
+
+3.  Download  WebDriver for the specific browser(before dowloading check the version of the browser)
+https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/win32/chromedriver-win32.zip
+
+	the above link is Chrome 125 version as per my laptop
+
+4.  Related ChromeBrowser, we have to use setProperty as follows
+System.setProperty("webdriver.chrome.driver", "C:\\Phase5Sessions\\chromedriver-win64\\chromedriver.exe");
+5.  If the application is Maven Application, then add following dependency
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.11.0</version>
+</dependency>
+-------------------------
+Locators :- These are used to locate an webelement in the web page. 
+there are 8 types of locators are exist.
+
+1. id  		:- It is based on ID Attribute of the tag
+2. name		:- It is based on Name Attribute of the tag
+3. classname	:- It is based css classname of the tag
+4. tagname	:- It is based on tag
+5. cssselector	:- It is based attributes of the tag.
+6. XPath	:- It is based on query
+7. linktext	:- It is based on LinkText of the hyperlink
+8. partiallinktext :- It is based on partial link text of the hyperlink
+
+To use above locators we have to use "By" classname along with locator name
+				By.id("attribute name")
+To search an element we have to used a method along with "webdriver" class object
+				WebDriverClassObject.findElement(By.id("attribute name"));
+
+WebElement :- this class is used to store element which searched when it found. 
+WebElement elementObj = WebDriverClassObject.findElement(By.id("attribute name"));
+sendKeys() :- by using methods we can some text to the elemnts
+-----------------
+Navigations:- 
+
+DriverClassObject provides some methods to navigate pages back, forward, ....
+
+back() :-  It clicks back button on browser
+driverClassObj.navigete().back()
+forward() :- It clicks forward button on browser
+driverClassObj.navigete().forward()
+to() :-  to move on some other webpage/website.
+driverClassObj.navigete().to("www.abc.com")
+refresh() :-  to refresh the page
+driverClassObj.navigete().refresh()
+-----------------------------------
