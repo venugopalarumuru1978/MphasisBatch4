@@ -1,6 +1,4 @@
 package coms;
-
-
 import java.util.Scanner;
 
 import org.openqa.selenium.By;

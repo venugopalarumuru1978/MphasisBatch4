@@ -1,0 +1,29 @@
+Today's Agenda:-
+---------------
+1. Handling different tools
+	textbox
+	radiobutton
+	checkbox
+	dropdown with multi-option selection
+2. Navigations
+3. Handling Dialog Boxes
+	alert()
+	confirmbox()
+	prompt()
+4. ScreenShots
+-------------
+Navigations :-  
+It is the process of squence actions for  a task. 
+it mainly tells that navigations in browser like back/forward/refresh etc...
+
+refresh() :- to refresh page
+forward() :-  to move forward from previous page
+back() :-  to move backward from current page
+to() :-  to open a particular page.
+
+these all methods comes under navigate() method from web driver. 
+
+webdriverObj.navigate().refresh()/forward()/back()/to()
+ 
+timeout() method:-  this method can be used to specify interval period of time. 
+

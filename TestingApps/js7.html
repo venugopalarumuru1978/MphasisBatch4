@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1 style="text-align: center;">JavaScript - DropdownList</h1>
+<form name="frmDdl">
+    <p style="text-align: center;">
+        <select name="ddlLocation"  onchange="DdlFun()">
+            <option value="-1">Select City</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Amaravathi">Amaravathi</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Kolkatta">Kolkatta</option>
+        </select>
+    </p>
+    <h2 id="resultLoc" style="text-align: center;"></h2>
+    <hr />
+    <h1 style="text-align: center;">Courses</h1>
+    <p style="text-align: center;">
+        <select name="ddCourse" multiple="true" style="height: 120px;">
+            <option value="Java">Java</option>
+            <option value="Dotnet">Dotnet</option>
+            <option value="SQL Server">SQL Server</option>
+            <option value="MySQL">MySQL</option>
+            <option value="Oracle">Oracle</option>
+        </select>
+    </p>
+</form>
+    <script type="text/javascript">
+           
+           function  DdlFun()
+           {
+                var loc = frmDdl.ddlLocation.value;
+                if(loc!="-1")
+                    document.getElementById("resultLoc").innerHTML = "Ur City is : " + loc;
+                else
+                    alert("Please select a city");
+           }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <p style="text-align: center;width:100%">
+    <input type="button"  value="Alert Box Button" onclick="alertbox()" />
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button"  value="Confirm Box Button" onclick="confirmbox()" />
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button"  value="Prompt Box Button" onclick="promptbox()"/>
+
+    <br /><br />
+    <span id="res"></span>
+    </p>
+    <script>
+
+        function alertbox()
+        {
+            alert("This is AlertBox ");
+        }
+
+        function confirmbox()
+        {
+            if(confirm("is it confirm box ")==true)
+                    document.getElementById("res").innerHTML = "Yes it is confirm box";
+            else
+                    document.getElementById("res").innerHTML = "No it is not confirm box";
+        }
+
+        function promptbox()
+        {
+            var str = prompt("Enter any value ");
+            document.getElementById("res").innerHTML = "Given Value is : " + str;
+        }
+    </script>
+</body>
+</html>
