@@ -1,0 +1,165 @@
+Today's Agenda
+--------------
+What is an TestNG?
+--------------
+It is one of the testing framework for different types of testings for java applications.
+1. UnitTesting
+2. End-To-End Testing
+3. Integration Testing
+4. Smoke Testing
+5. Functional Testing
+
+When it is compare with Junit, Junit is only meant for Unit Testing
+TestNG is developed by inspiring from Junit(Java) and NUnit(Dotnet) for different 
+type of testings.
+
+In TestNG = NG stands for Next Generation
+ 
+Differences b/w Junit  and TestNG
+
+1.  Annotations:-  Both Junit and TestNG are having annotations, In TestNG we got more no of 	annotations which are most use full when compare to JUNIT.
+2.  Test Cases will be executed parellelly in TestNG whereas junit will not allow this.
+3.  As per the TestNG, if required a test method can have parameters, where junit will not.
+4.  Data Providers for TestNG:-  these are used to pass values to the test methods. 
+		It can be done manually  or  with excel sheet. 
+5.  TestNG allows to generate HTML based reports whereas Junit will not. 
+6.  It also generates the Logs.
+
+Software Requirements of the TestNG:-
+
+1.  if the application is Maven, then add it's related "dependency". 
+		or
+    if the application is Normal Project, then add it's related jar files. 
+
+		<dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>7.10.2</version>
+		    <scope>test</scope>
+		</dependency>
+
+2.  Once dependency / jar files are added to the application, we need configure TestNG tool for the 
+	working editor(Eclipse/IntelliJ/)
+	It has to be done as follows(Eclipse)
+		Help Menu - Eclipse Market Place - Enter following text "TestNG for Eclipse" in search 			area - then Click Search Button
+		It will show an Option "TestNG for Eclipse" - there we can find "Install" button
+			click that button to install and finish the installation. 
+-----------------------------------------------------------
+Note :-  while executing testcases, TestNG follows asending order of the TestCase Method Names.
+--------------------------------
+Annotations in TestNG:- 
+
+These all annotations works based on testng xml file sequence.
+
+@BeforeTest	:-  Before Start the test tag
+@AfterTest	:-  After Completion of the test tag
+@BeforeMethod	:-  Before start the method tag
+@AfterMethod    :-  After completion of the method tag
+@BeforeSuite	:-  Before start the Suite tag
+@AfterSuite	:-  After completion of the suite tag
+@BeforeClass
+@AfterClass 
+
+Sequence of these Annotations
+
+BeforeSuite -> BeforeTest -> BeforeClass -> BeforeMethod
+
+----------------------------------------
+Test Seniories :- This is the concept of executing group of test methods which located in same or different classes. 
+
+Class - 1 :  A, B, C
+Class - 2 :  D, E, F, G
+Class - 3 :  H, I, J
+
+Seniorio - 1 :- wants to execute some test cases
+		A, E, G, I
+
+Working With TestNG Xml File:-
+1. What is Testng xml
+	It is an xml file where it consist collection of testcase configurations.
+2. What is the need of testng xml file.
+	When test cases are distributed into multiple classes and from that only specific testcases 		need to execute, in that case this xml file is needed. 
+3. How to create a testng xml file
+		Right Click on Application - New - TestNG - Convert to TestNG - follow the remaining 		process.
+4. How to add the test cases to the xml file
+<suite name="name of suite">
+	// collection of test cases is called suite
+	<test  name="name of the test"  enabled="true/false">
+		<classes>
+			<class name="name of the class">
+				<methods>
+					<include name="testmethodname" />
+					.......
+				</methods>
+			</class>
+			
+			....
+		</classes>
+	</test>
+	.......
+</suite>
+5. How to execute the tests using xml file
+	Right Click on Xml File - Run As - TestNG Suite
+----------------------
+<suite name="Suite">
+  <test name="SampleTest">
+    <classes>
+      <class name="com.testngapps.DemoTest">
+      		<methods>
+      			<include name="TestXyz"/>
+      			<include name="TestAbc"/>
+      		</methods>
+      </class>
+      <class name="com.testngapps.TestWebMethods">
+      		<methods>
+      			<include name="FacebookTest"/>
+      		</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+----------------------
+Assertions :-
+
+An assertion is a boolean expression at a specific point in a program which will be true unless there is a bug in the program. 
+A test assertion is defined as an expression, which encapsulates some testable logic specified about a target under test.
+
+As per the TestNG,  there are two types of Assertions
+
+HardAssertions :-  These assertions are stop test case execution once Assertion is failed.
+			To work with these assertions, "Assert" class is used.
+ 
+SoftAssertions :-  These assertions will  not stop test case execution even once Assertion is failed.
+			It will record all the assertions which failed and finally report will be
+			provided. 
+
+			To work with this, "SoftAssert" class is used. 
+			
+			Create an object for the "SoftAssert"  then use the methods. 
+--------------------------------
+Parameters in TestNG:-
+
+Parameters are values which can be sent to the method at the time of calling. 
+As per the TestNG, we can pass parameters to the Test Case methods also. 
+
+To do this process:- 
+
+Steps:- 
+1.  Parameters are defined in testng xml file with specific values
+	As per the testng  parameters are classified into two types
+			1. Suite Level Parameters
+				This type of parameters are defined in <Suite> tag and used in all the
+				test cases.
+			2. Test Level Parameters
+				This type of parameters are defined in <Test> tag and used only for 
+				that test case.
+
+		To define paramters use following syntax
+			<parameter  name="variablename"  value="value of the parameter" />
+2.  Parameters are implemented for every test methods with following annotations
+		@Parameters("variablename")
+3.  here if parameters are using then that test method must have Arguments.
+		public void methodname([arg])
+		{
+			......
+		}

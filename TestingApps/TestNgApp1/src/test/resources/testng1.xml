@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+  <test name="Test1" enabled="false">
+  
+  	<classes>
+  		<class name="com.testng_pack.SampleTest">
+  			<methods>
+  				<include name="TestBca"/>
+  				<include name="TestAbc"/>
+  			</methods>
+  		</class>
+
+  		<class name="com.testng_pack.TestWebMethods">
+  			<methods>
+  				<include name="testFb"/>  				
+  			</methods>
+  		</class>
+  	</classes>
+  </test> <!-- Test -->
+  
+  <test name="Test2" enabled="true">
+  	<classes>
+  		<class name="com.testng_pack.SampleTest">
+  			<methods>
+  				<include name="TestXyz"/>
+  			</methods>
+  		</class>
+
+  		<class name="com.testng_pack.TestWebMethods">
+  			<methods>
+  				<include name="testGoogle"/>  				
+  			</methods>
+  		</class>
+  	</classes>
+  </test>
+</suite> <!-- Suite -->
