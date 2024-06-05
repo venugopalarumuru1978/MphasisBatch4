@@ -1,0 +1,135 @@
+Today's Agenda
+---------------
+1. Data Providers in TestNG
+2. Data providers using Excel
+3. Generating Reports
+4. Priorities of the test cases
+---------------
+Data Providers:-
+What are DataProviders in TestNG? 
+
+The DataProviders in TestNG are another way to pass the parameters in the test function, the other one being TestNG parameters. 
+DataProviders pass different values to the TestNG Test Case in a single execution and in the form of TestNG Annotations.
+
+Steps :- 
+1.  Create a method with Object[][] return type which holds set of values 
+		in the form of double dimensional array of Object Data Type. 
+2.  Method must be preceded with @DataProvider  annotation
+
+	@DataProvider
+	public Object[][] MethodName()
+	{
+		code 
+	return <object/variable>;
+	}
+3.  To Implement/Access Data provider values, @Test annotation has to be specify as follows in test 		case method
+
+		@Test(dataProvider="methodname of data provider")
+		public void testcasemethod([arg])
+		{
+			.......
+		}
+---------------------------
+Excel Integration with Data Provider:- 
+
+Steps :-  
+1. Create an excel file with some data and save it. 
+2. Add that excel file to the Application(keep that file in src/test/resource folder)
+3. Download and add following dependencies
+		name :  apache.poi
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.1.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.1.0</version>
+</dependency>
+4.  Create a class and method then write needed code
+		try
+		{
+		File excelFile = new File("./src/main/resources/TestUsersInfo.xlsx");
+		System.out.println(excelFile.exists());
+
+		FileInputStream fis = new FileInputStream(excelFile);
+		XSSFWorkbook  workbook= new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+
+		System.out.println(sheet.getPhysicalNumberOfRows());  // calculates all the rows including header row
+		System.out.println(sheet.getLastRowNum()); // calculates all the rows excluding header row
+		
+		int rows = sheet.getLastRowNum();
+		int cols = sheet.getRow(0).getLastCellNum();
+		System.out.println("No of Columns : " + cols);
+	
+		for(int i=1;i<=rows;i++)
+		{
+			for(int j=0;j<cols;j++)
+			{
+				DataFormatter df = new DataFormatter(); 
+			System.out.print(df.formatCellValue(sheet.getRow(i).getCell(j)) + "  ");
+			}
+			System.out.println();
+		}
+		workbook.close();
+		fis.close();
+		
+		}
+		catch(Exception ex)
+		{
+			System.out.println(ex);
+		}
+	}
+--------------------------------
+Reports:-
+
+How to generate Html Based Reports?
+
+whenever we generating report, it should consist following information
+
+1.  Passed TestCase Info
+2.  Faild TestCase Info
+3.  ScreenShots of the failed testcases
+4.  Browser Info
+5.  Author(who has tested)
+6.  System Info
+7.  Tested Date Time
+
+Steps:-
+
+Add following dependency for report generation
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
+
+ITestContext :- this interface is used to get information from the testng xml file based test is running.
+---------------
+Priorities of the test cases
+
+Priority means in testng is, Order of executing test case methods.
+
+As per TestNG, every test case method executes based on MethodName in asending order by default.
+But as per the user required, if any specific order is needed, there are two ways
+
+1. Specifing list of methods in XML Config file.
+2. Specifing priority for every test method while defining with "priority" option in Test Annotation
+		@Test(priority=number)
+	here numbers are starts from 0, 1, .....
+
+Test any  ticket booking application:-
+
+1. SignUp
+2. Login
+3. Search the Tickets
+4. Book/Buy the Tickets
+5. Download the Tickets
+6. Logout
+------------

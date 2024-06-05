@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite_Login">
+	<parameter name="author" value="sahasra"/>
+	<parameter name="browserName" value="edge"/>
+  <test name="TestLogin">
+  		<classes>
+  			<class name="com.dataproviders.reports.TestLoginReport">
+  				<methods>
+  					<include name="LoginCheck" />
+  				</methods>  				
+  			</class>
+  		</classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
