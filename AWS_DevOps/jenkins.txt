@@ -1,0 +1,79 @@
+Today's Agenda:-
+----------------
+Jenkins
+----------------
+Steps to install jenkins
+
+1.  Create an Ubuntu EC2 Instance
+2.  Connect to that instance
+3.  Update the system
+	sudo apt update
+4.  install java(Jenkins runs based on java)
+	sudo apt install default-jre  (for Ubuntu system)
+
+		or 
+	apt install openjdk-17-jdk openjdk-17-jre
+
+	https://www.rosehosting.com/blog/how-to-install-java-17-lts-on-ubuntu-20-04/
+
+	java --version (for checking version of java)
+5.  now get jenkins repo and it's key into EC2 Instance
+	 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+	
+	sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+6.  Again update the system
+	sudo apt  update
+	
+	Note:-  If you are getting any error use following command
+		sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <key>
+			copy from the command prompt which show on error info
+		
+		now repeat same command		
+	sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+		now again update
+			sudo  apt update
+7.  install jenkins with following command
+	sudo apt-get install jenkins
+8.  Check the status of the jenkins
+	sudo systemctl status jenkins
+
+	sudo usermod -a -G docker jenkins
+
+9.  now open browser, then take public url from the EC2 instance and paste on browser alongwith 8080
+		port number
+	http://3.110.102.103:8080/
+10.  then follow the installation steps as it is directed. 
+---------------------
+http://35.154.13.162:8080/
+---------------------
+http://13.232.156.177:8080/
+----
+http://13.235.91.232:8080/
+pipeline {
+    agent any
+    tools{
+        maven 'Maven Info'
+    }
+    stages {
+        stage('git code') {
+            steps {
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '1fa3df03-ba82-4d5d-8803-ca692bea9a1c', url: 'https://github.com/venugopalarumuru1978/TriconDemoApp.git']])
+            }
+        }
+        
+        stage('maven tool') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+        
+        stage('deploy') {
+            steps {
+                deploy adapters: [tomcat9(credentialsId: '48da6d0a-e0cd-499f-9639-5aaccac72ede', path: '', url: 'http://13.200.254.153:9098')], contextPath: null, onFailure: false, war: 'target/*.war'
+            }
+        }
+    }
+}
+
+https://www.devopsschool.com/blog/setting-up-the-cron-jobs-in-jenkins-using-build-periodically-scheduling-the-jenins-job/
