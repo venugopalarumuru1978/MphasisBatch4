@@ -1,0 +1,65 @@
+Bus Pass Management System
+--------------------------
+Db Tables
+
+Admin:- 
+
+SNo    UserName     Password
+-----------------------------
+
+-----------------------------
+
+
+UserReg
+
+Uid    CustomerName       Email    Password    PhoneNumber
+-----------------------------------------------------------
+
+-----------------------------------------------------------
+
+Drivers
+
+Sno    DriverName       Location       LicenceNumber      Email    PhoneNumber
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Vechicles
+
+Sno     VechName       VechNumber      VechType
+------------------------------------------------
+
+------------------------------------------------
+
+BusRoutes
+
+Sno	RouteName	StartPoint	EndPoint	VechNumber    DriverID   TktFair    TotalStops
+------------------------------------------------------------------------------------------------------
+1	DSNR-ECIL         DSNR            ECIL             V-1234        101       100           6
+------------------------------------------------------------------------------------------------------
+Sno	
+RouteName
+StartPoint
+EndPoint
+Description -  Here mention all the bus stoping station names
+TotalStops
+StartTime
+EndTime
+VechNumber    
+DriverID   
+TktFair    
+-----------------------------------
+Feedback
+
+Fid	FeedBack     Uid
+------------------------
+
+------------------------
+
+BusPassRequest
+
+Reqid		RequestRoute	RouteID		UserID
+------------------------------------------------------
+1		DSNR-ECIL	1		101
+------------------------------------------------------
+

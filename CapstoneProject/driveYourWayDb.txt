@@ -1,0 +1,46 @@
+Drive Your Way Db:- 
+
+Admin Table
+
+Customer Table
+
+CustID		CustomerName		Email		Phone		Password
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+
+CarCategory
+
+CatID		CategoryName
+----------------------------
+
+----------------------------
+Cars
+
+CarID
+CarModelName
+CarRegNumber
+CarModelYear
+CarPrice
+CarOwnername
+OwnerPhone
+CatID
+CarForWhat  -  (For Selling/For Purchasing)
+----------------------------
+
+ShortlistedCars
+-----------------
+Sno
+ShortListcar
+CustID
+-----------------
+
+------------------------------
+Prorities:-
+---------------------
+CCTV Complaint Management System
+Buss Pass Management System
+DataMax
+Drive Your Way
+mAadhar
